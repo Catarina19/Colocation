@@ -31,7 +31,7 @@
                         <form class="form" method="POST" action="login_data.php">
                             <table class="table">
                                 <tr>
-                                    <td>Login : </td><td><input type="text" placeholder="Entrez votre login" name="fLogin" value="<?= @$_GET['fLogin']; // pour éviter à l'utilisateur de retaper son login ?>"><td>
+                                    <td>Email : </td><td><input type="text" placeholder="Entrez votre login" name="fLogin" value="<?= @$_GET['fLogin']; // pour éviter à l'utilisateur de retaper son login ?>"><td>
                                 </tr>
                                 <tr>
                                     <td>Password : </td>

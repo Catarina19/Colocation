@@ -93,8 +93,14 @@
         <div id="divMenuRight" class="pull-right">
             <div class="navbar">
                 <div class="nav-collapse collapse">
-                    <ul class="nav nav-pills ddmenu">
-                        <li><a href="index.php">S'inscrire</a></li>
+                    <ul class="nav ddmenu">
+                        <li>
+                            <?php if(@$_GET['action']=="vue_inscription") :?>
+                            <li><a href="index.php?action=vue_inscription">S'inscrire</a></li>
+                            <?php else : ?>
+                            <li><a href="index.php?action=vue_inscription">S'inscrire</a></li>
+                            <?php endif; ?>
+                        </li>
                     </ul>
                 </div>
             </div>

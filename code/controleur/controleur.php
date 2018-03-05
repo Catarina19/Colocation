@@ -25,13 +25,20 @@ function erreur($e)
 
 // ----------------- Fonctions en lien avec les snows ---------------------
 
-function snows()
+function appartement()
 {
   $resultats=getSnows(); // pour récupérer les données des snows dans la BD
-  require 'vue/vue_snows.php';
+  require 'vue/vue_appartement.php';
 }
 
-// ----------------- Fonctions en lien avec login ---------------------
+// ----------------- Fonctions en lien avec l'inscription -----------------
+
+function inscription()
+{
+    require 'vue/vue_inscription.php';
+}
+
+// ----------------- Fonctions en lien avec login -------------------------
 
 function login()
 {

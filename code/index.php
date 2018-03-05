@@ -21,8 +21,11 @@ try
       case 'vue_accueil' :
           accueil();
           break;
-      case 'vue_snows' :
-          snows();
+      case 'vue_appartement' :
+          appartement();
+          break;
+      case 'vue_inscription' :
+          inscription();
           break;
       case 'vue_login' :
           login();
