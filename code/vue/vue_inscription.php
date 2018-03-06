@@ -8,7 +8,7 @@ $titre="RentASnow - Inscription";
     <div class="span12" id="divMain">
         <h1>Crée un compte</h1>
         <p>
-        <form class="form" method="POST" action="#">
+        <form class="form" method="POST" action="index.php">
             <table class="table">
                 <tr>
                     <td>Nom : </td>

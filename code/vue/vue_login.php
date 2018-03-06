@@ -3,7 +3,6 @@
 ob_start();
 $titre = 'Rent A Snow - Login';
 ?>
-
     <div class="span12" id="divMain">
         <h1>Login</h1>
         <?php if (isset($_GET['erreur_email'])) : ?>

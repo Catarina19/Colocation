@@ -27,7 +27,6 @@ function erreur($e)
 
 function appartement()
 {
-  $resultats=getSnows(); // pour récupérer les données des snows dans la BD
   require 'vue/vue_appartement.php';
 }
 
@@ -36,6 +35,7 @@ function appartement()
 function inscription()
 {
     require 'vue/vue_inscription.php';
+    $newmembre = create_membre();
 }
 
 // ----------------- Fonctions en lien avec login -------------------------
@@ -43,4 +43,9 @@ function inscription()
 function login()
 {
     require 'vue/vue_login.php';
+}
+
+function Json()
+{
+    require 'vue_json.php';
 }

@@ -24,6 +24,9 @@ try
       case 'vue_appartement' :
           appartement();
           break;
+      case 'vue_Json' :
+          Json();
+          break;
       case 'vue_inscription' :
           inscription();
           break;
