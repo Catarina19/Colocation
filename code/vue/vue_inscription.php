@@ -3,6 +3,7 @@
 // tampon de flux stocké en mémoire
 ob_start();
 $titre="RentASnow - Inscription";
+
 ?>
 
     <div class="span12" id="divMain">
@@ -47,5 +48,6 @@ $titre="RentASnow - Inscription";
     </div>
 
 <?php
+
 $contenu = ob_get_clean();
 require "gabarit.php";

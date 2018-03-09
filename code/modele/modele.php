@@ -25,19 +25,49 @@ function getFile()
 // --- create a new membre
 function create_membre()
 {
-    if (isset($create)) // add one person at the end of the array.
-    {
-        $nom = @$_GET['nom'];
-        $prenom = @$_GET['prenom'];
-        $email = @$_GET['email'];
-        $password = @$_GET['password'];
-        $tel = @$_GET['tel'];
-        $naissance = @$_GET['naissance'];
+    $dataDirectory = "Json";
+    $dataFileName = "Membre.json";
 
-        $newmembre = array("Nom" => $nom, "Prenom" => $prenom, "Email" => $email, "Password" => $password, "Tel" => $tel, "Naissance" => $naissance);
-        $data[] = $newmembre;
+    $nom = @$_GET['nom'];
+    $prenom = @$_GET['prenom'];
+    $email = @$_GET['email'];
+    $password = @$_GET['password'];
+    $tel = @$_GET['tel'];
+    $naissance = @$_GET['naissance'];
+
+    //$newmembre = array("Nom" => $nom, "Prenom" => $prenom, "Email" => $email, "Password" => $password, "Tel" => $tel, "Naissance" => $naissance);
+    //$data[] = $newmembre;
+
+    try {
+        // On essayes de récupérer le contenu existant
+        $data = file_get_contents("$dataDirectory/$dataFileName");
+
+        if( !$data || strlen($data) == 0 ) {
+            // On crée le tableau JSON
+            $tableau_pour_json = array();
+        } else {
+            // On récupère le JSON dans un tableau PHP
+            $tableau_pour_json = json_decode($data, true);
+        }
+
+        $newmembre -> Nom = $nom;
+        $newmembre -> Prenom = $prenom;
+        $newmembre -> Email = $email;
+        $newmembre -> Password = $password;
+        $newmembre -> Tel = $tel;
+        $newmembre -> Naissance = $naissance;
+
+        $tableau_pour_json [] = $newmembre;
+        // On ajoute le nouvel élement
+        //array_push( $tableau_pour_json,);
+        // On réencode en JSON
+        $contenu_json = json_encode($tableau_pour_json);
+
+        // On stocke tout le JSON
+        file_put_contents("$dataDirectory/$dataFileName", $contenu_json);
+    }catch( Exception $e ) {
+        echo "Erreur : ".$e->getMessage();
     }
-    return $newmembre;
 }
 
 // ============== Save data ================

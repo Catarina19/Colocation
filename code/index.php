@@ -30,6 +30,9 @@ try
       case 'vue_inscription' :
           inscription();
           break;
+      case 'comfirmer' :
+          comfirmer();
+          break;
       case 'vue_login' :
           login();
           break;

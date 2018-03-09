@@ -35,7 +35,11 @@ function appartement()
 function inscription()
 {
     require 'vue/vue_inscription.php';
-    $newmembre = create_membre();
+}
+
+function confirmer()
+{
+    create_membre();
 }
 
 // ----------------- Fonctions en lien avec login -------------------------

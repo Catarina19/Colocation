@@ -2,7 +2,7 @@
 
 // tampon de flux stocké en mémoire
 ob_start();
-$titre="RentASnow - Accueil";
+$titre="Colocation - Accueil";
 ?>
 
 <div class="span12" id="divMain">
