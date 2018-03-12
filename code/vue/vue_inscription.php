@@ -39,7 +39,7 @@ $titre="RentASnow - Inscription";
                     <td><input type="text" name="naissance" value="<?= @$_GET['naissance']; ?>"></td>
                 </tr>
                 <tr>
-                    <td><input class="btn" type="submit" value="Confirmer" /></td>
+                    <td><input class="btn" type="submit" value="Confirmer" onclick="confirmer()"/></td>
                     <td></td><td></td><td></td>
                 </tr>
             </table>
