@@ -7,7 +7,7 @@
  * Updated : Nicolas.Glassey
  * Date : 14.02.2018
  */
-
+print_r($_POST);
 session_start();
 require "controleur/controleur.php";
 
@@ -24,14 +24,14 @@ try
       case 'vue_appartement' :
           appartement();
           break;
+      case 'enregistrer' :
+          enregistrer();
+          break;
       case 'vue_Json' :
           Json();
           break;
       case 'vue_inscription' :
           inscription();
-          break;
-      case 'comfirmer' :
-          comfirmer();
           break;
       case 'vue_login' :
           login();

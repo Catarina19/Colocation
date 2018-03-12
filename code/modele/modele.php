@@ -28,15 +28,12 @@ function create_membre()
     $dataDirectory = "Json";
     $dataFileName = "Membre.json";
 
-    $nom = @$_GET['nom'];
-    $prenom = @$_GET['prenom'];
-    $email = @$_GET['email'];
-    $password = @$_GET['password'];
-    $tel = @$_GET['tel'];
-    $naissance = @$_GET['naissance'];
-
-    //$newmembre = array("Nom" => $nom, "Prenom" => $prenom, "Email" => $email, "Password" => $password, "Tel" => $tel, "Naissance" => $naissance);
-    //$data[] = $newmembre;
+    $nom = @$_POST['nom'];
+    $prenom = @$_POST['prenom'];
+    $email = @$_POST['email'];
+    $password = @$_POST['password'];
+    $tel = @$_POST['tel'];
+    $naissance = @$_POST['naissance'];
 
     try {
         // On essayes de récupérer le contenu existant
@@ -50,6 +47,8 @@ function create_membre()
             $tableau_pour_json = json_decode($data, true);
         }
 
+        $newmembre = new stdClass();
+
         $newmembre -> Nom = $nom;
         $newmembre -> Prenom = $prenom;
         $newmembre -> Email = $email;
@@ -58,8 +57,6 @@ function create_membre()
         $newmembre -> Naissance = $naissance;
 
         $tableau_pour_json [] = $newmembre;
-        // On ajoute le nouvel élement
-        //array_push( $tableau_pour_json,);
         // On réencode en JSON
         $contenu_json = json_encode($tableau_pour_json);
 
@@ -69,7 +66,6 @@ function create_membre()
         echo "Erreur : ".$e->getMessage();
     }
 }
-
 // ============== Save data ================
 function save_data()
 {
@@ -80,27 +76,3 @@ function save_data()
 
     file_put_contents("$dataDirectory/$dataFileName", json_encode($data));
 }
-/*
-// ============== Display data ================
-function display_data()
-{
-    $data = getData();
-
-    echo "<h1>Membres</h1>";
-    echo "<table>";
-    echo "<tr><th>Nom</th><th>Prénom</th><th>Email</th><th>Password</th><th>Tel</th><th>Naissance</th></tr>";
-
-
-    foreach ($data as $membre) {
-        echo "<tr>";
-        echo "<td>" . $membre->Nom . "</td>";
-        echo "<td>" . $membre->Prenom . "</td>";
-        echo "<td>" . $membre->Email . "</td>";
-        echo "<td>" . $membre->Password . "</td>";
-        echo "<td>" . $membre->Tel . "</td>";
-        echo "<td>" . $membre->Naissance . "</td>";
-        echo "</tr>";
-    }
-    echo "</table>";
-    return $data;
-}*/

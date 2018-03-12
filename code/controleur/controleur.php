@@ -37,9 +37,10 @@ function inscription()
     require 'vue/vue_inscription.php';
 }
 
-function confirmer()
+function enregistrer()
 {
     create_membre();
+    require "vue/vue_accueil.php";
 }
 
 // ----------------- Fonctions en lien avec login -------------------------

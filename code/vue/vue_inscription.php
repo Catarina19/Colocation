@@ -9,7 +9,7 @@ $titre="RentASnow - Inscription";
     <div class="span12" id="divMain">
         <h1>Crée un compte</h1>
         <p>
-        <form class="form" method="POST" action="index.php">
+        <form class="form" method="POST" action="index.php?action=enregistrer">
             <table class="table">
                 <tr>
                     <td>Nom : </td>
@@ -39,7 +39,7 @@ $titre="RentASnow - Inscription";
                     <td><input type="text" name="naissance" value="<?= @$_GET['naissance']; ?>"></td>
                 </tr>
                 <tr>
-                    <td><input class="btn" type="submit" value="Confirmer" onclick="confirmer()"/></td>
+                    <td><input class="btn" type="submit" value="Confirmer"/></td>
                     <td></td><td></td><td></td>
                 </tr>
             </table>
