@@ -7,7 +7,9 @@
       <change beforePath="$PROJECT_DIR$/code/controleur/controleur.php" afterPath="$PROJECT_DIR$/code/controleur/controleur.php" />
       <change beforePath="$PROJECT_DIR$/code/index.php" afterPath="$PROJECT_DIR$/code/index.php" />
       <change beforePath="$PROJECT_DIR$/code/modele/modele.php" afterPath="$PROJECT_DIR$/code/modele/modele.php" />
+      <change beforePath="$PROJECT_DIR$/code/vue/gabarit.php" afterPath="$PROJECT_DIR$/code/vue/gabarit.php" />
       <change beforePath="$PROJECT_DIR$/code/vue/vue_inscription.php" afterPath="$PROJECT_DIR$/code/vue/vue_inscription.php" />
+      <change beforePath="$PROJECT_DIR$/code/vue/vue_login.php" afterPath="$PROJECT_DIR$/code/vue/vue_login.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,38 +23,38 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+            <state relative-caret-position="68">
+              <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controleur.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="controleur.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/controleur/controleur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="41" column="20" lean-forward="true" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+            <state relative-caret-position="473">
+              <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modele.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="modele.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/modele/modele.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="58" column="43" lean-forward="false" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+            <state relative-caret-position="527">
+              <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Membre.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/Json/Membre.json">
+      <file leaf-file-name="vue_login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/vue/vue_login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="182" lean-forward="true" selection-start-line="0" selection-start-column="182" selection-end-line="0" selection-end-column="182" />
+            <state relative-caret-position="221">
+              <caret line="13" column="61" lean-forward="true" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -61,8 +63,8 @@
       <file leaf-file-name="vue_inscription.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/vue/vue_inscription.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="11" column="79" lean-forward="false" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="79" />
+            <state relative-caret-position="533">
+              <caret line="38" column="41" lean-forward="false" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -83,16 +85,17 @@
         <option value="$PROJECT_DIR$/controleur/controleur.php" />
         <option value="$PROJECT_DIR$/vue/gabarit.php" />
         <option value="$PROJECT_DIR$/code/contenu/login.php" />
-        <option value="$PROJECT_DIR$/code/vue/gabarit.php" />
-        <option value="$PROJECT_DIR$/code/vue/vue_login.php" />
         <option value="$PROJECT_DIR$/code/Json/test.php" />
         <option value="$PROJECT_DIR$/code/vue/vue-json.php" />
         <option value="$PROJECT_DIR$/code/vue/vue_accueil.php" />
-        <option value="$PROJECT_DIR$/code/Json/Membre.json" />
         <option value="$PROJECT_DIR$/code/vue/vue_inscription.php" />
+        <option value="$PROJECT_DIR$/code/Json/Membre.json" />
+        <option value="$PROJECT_DIR$/code/vue/vue_login_success.php" />
+        <option value="$PROJECT_DIR$/code/vue/gabarit.php" />
+        <option value="$PROJECT_DIR$/code/vue/vue_login.php" />
         <option value="$PROJECT_DIR$/code/index.php" />
-        <option value="$PROJECT_DIR$/code/controleur/controleur.php" />
         <option value="$PROJECT_DIR$/code/modele/modele.php" />
+        <option value="$PROJECT_DIR$/code/controleur/controleur.php" />
       </list>
     </option>
   </component>
@@ -170,7 +173,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../decoppetjoris-projweb-greenwatchers-49b5c11ac097" />
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RunDashboard">
@@ -212,7 +215,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28771000" />
+    <option name="totallyTimeSpent" value="31651000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="0" width="971" height="1040" extended-state="0" />
@@ -262,21 +265,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../151/Template/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../151/Template/contenu/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/modele.php" />
     <entry file="file://$PROJECT_DIR$/index.php" />
     <entry file="file://$PROJECT_DIR$/vue/vue_login.php" />
     <entry file="file://$PROJECT_DIR$/controleur/controleur.php" />
@@ -353,13 +341,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/vue/vue_login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/Json/liste_simple.php" />
     <entry file="file://$PROJECT_DIR$/code/vue/vue_appartement.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -390,42 +371,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/vue/gabarit.php">
+    <entry file="file://$PROJECT_DIR$/../decoppetjoris-projweb-greenwatchers-49b5c11ac097/modele/modele.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="66" column="47" lean-forward="true" selection-start-line="66" selection-start-column="47" selection-end-line="66" selection-end-column="47" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../decoppetjoris-projweb-greenwatchers-49b5c11ac097/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="31" column="56" lean-forward="true" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/vue/vue-json.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        <state relative-caret-position="510">
+          <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/vue/vue_inscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="11" column="79" lean-forward="false" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="79" />
+        <state relative-caret-position="533">
+          <caret line="38" column="41" lean-forward="false" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/controleur/controleur.php">
+    <entry file="file://$PROJECT_DIR$/code/vue/gabarit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="41" column="20" lean-forward="true" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+        <state relative-caret-position="541">
+          <caret line="74" column="50" lean-forward="false" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        <state relative-caret-position="68">
+          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/modele/modele.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -433,15 +430,31 @@
     <entry file="file://$PROJECT_DIR$/code/Json/Membre.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="182" lean-forward="true" selection-start-line="0" selection-start-column="182" selection-end-line="0" selection-end-column="182" />
+          <caret line="0" column="247" lean-forward="true" selection-start-line="0" selection-start-column="247" selection-end-line="0" selection-end-column="247" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/modele/modele.php">
+    <entry file="file://$PROJECT_DIR$/code/vue/vue_login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="58" column="43" lean-forward="false" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+        <state relative-caret-position="221">
+          <caret line="13" column="61" lean-forward="true" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/vue/vue_login_success.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="56" lean-forward="true" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/controleur/controleur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
           <folding />
         </state>
       </provider>

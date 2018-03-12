@@ -1,13 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Pascal.BENZONANA
- * Date: 08.05.2017
- * Time: 09:10
- * Updated : Nicolas.Glassey
- * Date : 14.02.2018
- */
-
 
 require "modele/modele.php";
 
@@ -45,9 +36,23 @@ function enregistrer()
 
 // ----------------- Fonctions en lien avec login -------------------------
 
-function login()
+function login($email, $password)
 {
-    require 'vue/vue_login.php';
+    if(!($email == "") && !($password == "")) {
+        $resultat = checkPass($email, $password);
+        if ($resultat) {
+            $_SESSION['email'] = $email;
+            require "vue/vue_login_success.php";
+        } else {
+            $erreurmdp = 1;
+            require 'vue/vue_login.php';
+        }
+    }
+    else{
+        $erreurmdp = 0;
+        require 'vue/vue_login.php';
+    }
+
 }
 
 function Json()

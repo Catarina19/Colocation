@@ -2,7 +2,7 @@
 
 // ---------------------------------------------
 // This function simply returns some hardcoded data
-function getData()
+/*function getData()
 {
     return json_decode('[{"Nom":"A","Prenom":"A","Email":"A","Password":"A","Tel":"A","Naissance":"A"}]',true);
 }
@@ -20,6 +20,27 @@ function getFile()
         echo "Fichier introuvable";
     }
     extract($_GET);
+}*/
+
+function checkPass($email, $password){
+    // ============== Load data ================
+
+    $dataFileName = "Json/Membre.json";
+    $identity = null;
+    $password = null;
+    $data = json_decode(file_get_contents("$dataFileName"));
+
+    $user = $email;
+
+    foreach ($data as $membre)
+    {
+        if($user == $membre->Email){
+            $identity = $membre->Email;
+        }
+        if ($membre->Password == $identity){
+            $password = $membre->Password;
+        }
+    }
 }
 
 // --- create a new membre
@@ -67,7 +88,7 @@ function create_membre()
     }
 }
 // ============== Save data ================
-function save_data()
+/*function save_data()
 {
     $data = getData();
 
@@ -75,4 +96,4 @@ function save_data()
     $dataFileName = "Membre.json";
 
     file_put_contents("$dataDirectory/$dataFileName", json_encode($data));
-}
+}*/

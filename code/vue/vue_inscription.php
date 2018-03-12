@@ -20,14 +20,14 @@ $titre="RentASnow - Inscription";
                 </tr>
                 <tr>
                     <td>Email : </td>
-                    <td><input type="text" name="email" value="<?= @$_GET['email']; ?>"></td>
+                    <td><input type="email" name="email" value="<?= @$_GET['email']; ?>"></td>
 
                     <td>Mot de passe : </td>
                     <td>
                         <?php if (isset($_GET['erreur'])) : ?>
-                            <input type="text" class="inputError" name="password" value="<?= @$_GET['password'];?>">
+                            <input type="password" class="inputError" name="password" value="<?= @$_GET['password'];?>">
                         <?php else : ?>
-                            <input type="text" name="password" value="<?= @$_GET['password']; ?>">
+                            <input type="password" name="password" value="<?= @$_GET['password']; ?>">
                         <?php endif ?>
                     </td>
                 </tr>
@@ -36,7 +36,7 @@ $titre="RentASnow - Inscription";
                     <td><input type="text" name="tel" value="<?= @$_GET['tel']; ?>"></td>
 
                     <td>Date de naissance : </td>
-                    <td><input type="text" name="naissance" value="<?= @$_GET['naissance']; ?>"></td>
+                    <td><input type="date" name="naissance" value="<?= @$_GET['naissance']; ?>"></td>
                 </tr>
                 <tr>
                     <td><input class="btn" type="submit" value="Confirmer"/></td>

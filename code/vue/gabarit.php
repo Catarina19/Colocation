@@ -72,11 +72,15 @@
                 <li><a href="index.php">Home</a></li>
                 <?php endif; ?>
 
-                <?php if((@$_GET['action'])=="vue_login") :?>
-                      <li class="active"><a href="index.php?action=vue_login">Login</a></li>
-                <?php else : ?>
-                      <li><a href="index.php?action=vue_login">Login</a></li>
-                <?php endif; ?>
+                  <?php if(isset($_SESSION['login'])) :?>
+                      <li><a href="index.php?logout=true">Logout</a></li>
+                  <?php else : ?>
+                      <?php if(@$_GET['action']=="vue_login") :?>
+                          <li class="active"><a href="index.php?action=vue_login">Login</a></li>
+                      <?php else : ?>
+                          <li><a href="index.php?action=vue_login">Login</a></li>
+                      <?php endif; ?>
+                  <?php endif; ?>
 
                 <?php if(@$_GET['action']=="vue_snows") :?>
                 <li class="active"><a href="index.php?action=vue_snows">Nos snows</a></li>

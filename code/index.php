@@ -1,15 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Pascal.BENZONANA
- * Date: 08.05.2017
- * Time: 08:54
- * Updated : Nicolas.Glassey
- * Date : 14.02.2018
- */
-print_r($_POST);
+
 session_start();
 require "controleur/controleur.php";
+/*if(@$_GET['logout']){
+    session_destroy();
+    header("location:index.php");*/
 
 try
 {
@@ -34,7 +29,7 @@ try
           inscription();
           break;
       case 'vue_login' :
-          login();
+          login(@$_POST['email'],@$_POST['password']);
           break;
       default :
           throw new Exception("Action non valide");
