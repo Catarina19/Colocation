@@ -82,10 +82,10 @@
                       <?php endif; ?>
                   <?php endif; ?>
 
-                <?php if(@$_GET['action']=="vue_snows") :?>
-                <li class="active"><a href="index.php?action=vue_snows">Nos snows</a></li>
+                <?php if(@$_GET['action']=="vue_appartement") :?>
+                <li class="active"><a href="index.php?action=vue_appartement">Nos propositions</a></li>
                 <?php else : ?>
-                <li><a href="index.php?action=vue_snows">Nos snows</a></li>
+                <li><a href="index.php?action=vue_appartement">Nos propositions</a></li>
                 <?php endif; ?>
 
                 </li>

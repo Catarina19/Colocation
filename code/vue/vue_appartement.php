@@ -9,40 +9,14 @@
  */
 
 ob_start();
-$titre = 'Rent A Snow - Nos snows';
+$titre = 'Collocation - Appartements';
 
 ?>
 
-<article>
-  <header>
-    <h2>Nos snows</h2>
-    <table class="table textcolor">
-      <tr>
-      <?php
-        // Affichage des entêtes du tableau (-1 pour enlever le champ statut)
-
-        for ($i=0; $i<$resultats->columnCount()-1; $i++)
-        {
-          $entete = $resultats->getColumnMeta($i);
-          echo "<th>" . $entete['name'] . "</th>";
-        }
-      ?>
-      </tr>
-      <?php foreach ($resultats as $resultat) :?>
-        <!-- Affichage des résultats de la BD -->
-        <tr>
-          <td><?=$resultat['idsurf'];?></td>
-          <td><?=$resultat['marque'];?></td>
-          <td><?=$resultat['boots'];?></td>
-          <td><?=$resultat['type'];?></td>
-          <td><?=$resultat['disponibilite'];?></td>
-        </tr>
-      <?php endforeach;?>
-    </table>
-  </header>
-</article>
-<hr/>
+<!-- Contenu -->
+<h1>Les appartements</h1>
 
 <?php
   $contenu=ob_get_clean();
   require "gabarit.php";
+  ?>
