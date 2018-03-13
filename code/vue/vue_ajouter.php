@@ -14,7 +14,7 @@ $titre = 'Collocation - Ajouter une proposition';
 <div class="span12" id="divMain">
     <h1>Ajouter un appartement</h1>
     <p>
-    <form class="form" method="POST" action="index.php?action=ajouter">
+    <form class="form" method="POST" action="index.php?action=ajout">
         <table class="table">
             <tr>
                 <td>Région : </td>
@@ -25,17 +25,18 @@ $titre = 'Collocation - Ajouter une proposition';
 
                 <td>NPA : </td>
                 <td><input type="text" name="npa" value="<?= @$_GET['npa']; ?>"></td>
-
-                <td>Ville : </td>
-                <td><input type="text" name="ville" value="<?= @$_GET['ville']; ?>"></td>
             </tr>
             <tr>
+                <td>Ville : </td>
+                <td><input type="text" name="ville" value="<?= @$_GET['ville']; ?>"></td>
+
                 <td>Description : </td>
                 <td><input type="text" name="description" value="<?= @$_GET['description']; ?>"></td>
 
                 <td>Date de disponibilité : </td>
                 <td><input type="date" name="diponibilite" value="<?= @$_GET['disponibilite']; ?>"></td>
-
+            </tr>
+            <tr>
                 <td>Prix : </td>
                 <td><input type="text" name="prix" value="<?= @$_GET['prix']; ?>"></td>
             </tr>

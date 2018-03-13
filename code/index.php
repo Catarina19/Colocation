@@ -32,6 +32,9 @@ try
       case 'vue_ajouter' :
           ajouter();
           break;
+        case 'ajout' :
+            ajout();
+            break;
       case 'vue_profil' :
           profil();
           break;

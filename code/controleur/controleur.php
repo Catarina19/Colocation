@@ -21,9 +21,16 @@ function appartement()
   require 'vue/vue_appartement.php';
 }
 
+// ----------------- Fontions en lien avec l'ajout d'appartements-----------------
+
 function ajouter()
 {
     require "vue/vue_ajouter.php";
+}
+
+function ajout()
+{
+    require "vue/vue_appartement.php";
 }
 
 // ----------------- Fonctions en lien avec l'inscription -----------------
