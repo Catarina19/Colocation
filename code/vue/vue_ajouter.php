@@ -49,6 +49,8 @@ $titre = 'Collocation - Ajouter une proposition';
     </p>
 </div>
 
+test
+
 <?php
 $contenu=ob_get_clean();
 require "gabarit.php";
