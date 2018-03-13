@@ -1,11 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Pascal.BENZONANA
- * Date: 08.05.2017
- * Time: 09:16
- */
-?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -72,7 +64,7 @@
                 <li><a href="index.php">Home</a></li>
                 <?php endif; ?>
 
-                  <?php if(isset($_SESSION['login'])) :?>
+                  <?php if(isset($_SESSION['email'])) :?>
                       <li><a href="index.php?logout=true">Logout</a></li>
                   <?php else : ?>
                       <?php if(@$_GET['action']=="vue_login") :?>
@@ -99,11 +91,16 @@
                 <div class="nav-collapse collapse">
                     <ul class="nav ddmenu">
                         <li>
+                        <?php if(isset($_SESSION['email'])) :?>
+                            <li><a href="index.php?action=vue_ajouter"><i class="general foundicon-plus icon"></i></a></li>
+                            <li><a href="index.php?action=vue_profil">Prenom Nom</a></li>
+                        <?php else : ?>
                             <?php if(@$_GET['action']=="vue_inscription") :?>
-                            <li><a href="index.php?action=vue_inscription">S'inscrire</a></li>
+                                <li><a href="index.php?action=vue_inscription">S'inscrire</a></li>
                             <?php else : ?>
-                            <li><a href="index.php?action=vue_inscription">S'inscrire</a></li>
+                                <li><a href="index.php?action=vue_inscription">S'inscrire</a></li>
                             <?php endif; ?>
+                        <?php endif; ?>
                         </li>
                     </ul>
                 </div>

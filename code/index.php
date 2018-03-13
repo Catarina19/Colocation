@@ -2,9 +2,10 @@
 
 session_start();
 require "controleur/controleur.php";
-/*if(@$_GET['logout']){
+if(@$_GET['logout']) {
     session_destroy();
-    header("location:index.php");*/
+    header("location:index.php");
+}
 
 try
 {
@@ -27,6 +28,12 @@ try
           break;
       case 'vue_inscription' :
           inscription();
+          break;
+      case 'vue_ajouter' :
+          ajouter();
+          break;
+      case 'vue_profil' :
+          profil();
           break;
       case 'vue_login' :
           login();

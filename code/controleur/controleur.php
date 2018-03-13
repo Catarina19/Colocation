@@ -14,11 +14,16 @@ function erreur($e)
   require "vue/vue_erreur.php";
 }
 
-// ----------------- Fonctions en lien avec les snows ---------------------
+// ----------------- Fonctions en lien avec les appartements ---------------------
 
 function appartement()
 {
   require 'vue/vue_appartement.php';
+}
+
+function ajouter()
+{
+    require "vue/vue_ajouter.php";
 }
 
 // ----------------- Fonctions en lien avec l'inscription -----------------
@@ -62,3 +67,12 @@ function Json()
 {
     require 'vue_json.php';
 }
+
+// ----------------- Fonctions en lien avec login -------------------------
+
+function profil()
+{
+    require 'vue/vue_profil.php';
+}
+
+
