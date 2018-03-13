@@ -1,33 +1,11 @@
 <?php
 
-// ---------------------------------------------
-// This function simply returns some hardcoded data
-/*function getData()
-{
-    return json_decode('[{"Nom":"A","Prenom":"A","Email":"A","Password":"A","Tel":"A","Naissance":"A"}]',true);
-}
-
-// ============== Load or create data ================
-function getFile()
-{
-    $dataDirectory = "Json";
-    $dataFileName = "Membre.json";
-
-    if (file_exists("../$dataDirectory/$dataFileName")) // the file already exists -> load it
-    {
-        $data = json_decode(file_get_contents("../$dataDirectory/$dataFileName"), true);
-    } else {
-        echo "Fichier introuvable";
-    }
-    extract($_GET);
-}*/
-
 function checkPass($email, $password){
     // ============== Load data ================
 
     $dataFileName = "Json/Membre.json";
     $identity = null;
-    $password = null;
+    $hash = null;
     $data = json_decode(file_get_contents("$dataFileName"));
 
     $user = $email;
@@ -37,10 +15,17 @@ function checkPass($email, $password){
         if($user == $membre->Email){
             $identity = $membre->Email;
         }
-        if ($membre->Password == $identity){
-            $password = $membre->Password;
+        if ($membre->Email == $identity){
+            $hash = $membre->Password;
         }
     }
+
+    if (password_verify($password, $hash)) {
+        return true;
+    } else {
+        return false;
+    }
+
 }
 
 // --- create a new membre
@@ -73,7 +58,7 @@ function create_membre()
         $newmembre -> Nom = $nom;
         $newmembre -> Prenom = $prenom;
         $newmembre -> Email = $email;
-        $newmembre -> Password = $password;
+        $newmembre -> Password = password_hash($password, PASSWORD_DEFAULT);
         $newmembre -> Tel = $tel;
         $newmembre -> Naissance = $naissance;
 
@@ -87,13 +72,3 @@ function create_membre()
         echo "Erreur : ".$e->getMessage();
     }
 }
-// ============== Save data ================
-/*function save_data()
-{
-    $data = getData();
-
-    $dataDirectory = "Json";
-    $dataFileName = "Membre.json";
-
-    file_put_contents("$dataDirectory/$dataFileName", json_encode($data));
-}*/
