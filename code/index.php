@@ -29,7 +29,7 @@ try
           inscription();
           break;
       case 'vue_login' :
-          login(@$_POST['email'],@$_POST['password']);
+          login();
           break;
       default :
           throw new Exception("Action non valide");

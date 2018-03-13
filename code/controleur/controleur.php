@@ -36,8 +36,11 @@ function enregistrer()
 
 // ----------------- Fonctions en lien avec login -------------------------
 
-function login($email, $password)
+function login()
 {
+    $email = @$_POST['email'];
+    $password = @$_POST['password'];
+
     if(!($email == "") && !($password == "")) {
         $resultat = checkPass($email, $password);
         if ($resultat) {
