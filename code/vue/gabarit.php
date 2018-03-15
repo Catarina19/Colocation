@@ -155,86 +155,54 @@
     <div id="footerOuterSeparator"></div>
 
     <div id="divFooter" class="footerArea">
-      <div class="divPanel">
-        <div class="row-fluid">
-          <div class="span3" id="footerArea1">
-            <h3>Notre magasin</h3>
-            <p>Nous sommes une équipe de jeunes snowboardeurs qui souhaitons faire découvrir cette discipline à tous les publics.</p>
-            <p>
-                <a href="#" title="Terms of Use">Terms of Use</a><br />
-                <a href="#" title="Privacy Policy">Privacy Policy</a><br />
-                <a href="#" title="FAQ">FAQ</a><br />
-                <a href="#" title="Sitemap">Sitemap</a>
-            </p>
-          </div>
+        <div class="divPanel">
+            <div class="row-fluid">
 
-          <div class="span3" id="footerArea2">
-            <h3>Dernière nouveautés</h3>
-            <p>
-                <a href="#" title="">Le Burton B221 est à disposition</a><br />
-                <span style="text-transform:none;">15/05/2016</span>
-            </p>
-            <p>
-                <a href="#" title="">Les horaires ont été étendus</a><br />
-                <span style="text-transform:none;">02/01/2016</span>
-            </p>
-            <p>
-                <a href="#" title="">Paul champion suisse !</a><br />
-                <span style="text-transform:none;">19/11/2015</span>
-            </p>
-            <p>
-                <a href="#" title="">VIEW ALL POSTS</a>
-            </p>
-          </div>
+                <div class="span6" id="footerArea1">
+                    <h3>Informations</h3>
+                    <p>
+                        <a href="#" title="Terms of Use">A Propos</a><br />
+                        <a href="#" title="Privacy Policy">Conditions générales</a><br />
+                        <a href="#" title="FAQ">Aide / FAQ</a><br />
+                        <a href="#" title="Sitemap">Partenaires</a>
+                        <a href="#" title="Privacy Policy">Sécurité</a><br />
+                        <a href="#" title="FAQ">Blog</a><br />
+                    </p>
+                </div>
 
-        <div class="span3" id="footerArea3">
-          <h3>Horaires de location</h3>
-          <p>Les locations peuvent s'effectuer tous les jours de la semaine en haute saison de 07h à 19h et en basse saison, les jours ouvrables de 8h à 18h.<br>
-          Vous pouvez aussi passer par le site. Pour le retrait et le dépot, vous devrez passer au guichet automatique à l'arrière du magasin</p>
+                <div class="span3" id="footerArea2">
+                    <h3>Contact</h3>
+                    <ul id="contact-info">
+                        <li>
+                            <i class="general foundicon-phone icon"></i>
+                            <span class="field">Téléphone :</span>
+                            <br />
+                            +41 27 890 12 34
+                        </li>
+                        <li>
+                            <i class="general foundicon-mail icon"></i>
+                            <span class="field">Email :</span>
+                            <br />
+                            <a href="mailto:info@colocation.com" title="Email">info@colocation.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <br />
+
+            <div class="row-fluid">
+                <div class="span12">
+                    <p class="copyright">Copyright © 2018 - site pour les colocataires de Suisse . All Rights Reserved.</p>
+                    <p class="social_bookmarks">
+                        <a href="#"><i class="social foundicon-facebook"></i> Facebook</a>
+                        <a href=""><i class="social foundicon-twitter"></i> Twitter</a>
+                        <a href="#"><i class="social foundicon-pinterest"></i> Pinterest</a>
+                        <a href="#"><i class="social foundicon-rss"></i> Rss</a>
+                    </p>
+                </div>
+            </div>
         </div>
-
-        <div class="span3" id="footerArea4">
-          <h3>Contacts</h3>
-
-          <ul id="contact-info">
-          <li>
-              <i class="general foundicon-phone icon"></i>
-              <span class="field">Téléphone :</span>
-              <br />
-              +41 27 890 12 34
-          </li>
-          <li>
-              <i class="general foundicon-mail icon"></i>
-              <span class="field">Email :</span>
-              <br />
-              <a href="mailto:info@rentasnow.com" title="Email">info@rentasnow.com</a>
-          </li>
-          <li>
-              <i class="general foundicon-home icon" style="margin-bottom:50px"></i>
-              <span class="field">Addresse :</span>
-              <br />
-              12 Rue de la Glisse<br />
-              2704 Sautons, Valais<br />
-              Suisse
-              </li>
-          </ul>
-        </div>
-
-        </div>
-        <br /><br />
-
-        <div class="row-fluid">
-          <div class="span12">
-            <p class="copyright">Copyright © 2017 Rent A Snow. All Rights Reserved.</p>
-            <p class="social_bookmarks">
-              <a href="#"><i class="social foundicon-facebook"></i> Facebook</a>
-              <a href=""><i class="social foundicon-twitter"></i> Twitter</a>
-              <a href="#"><i class="social foundicon-pinterest"></i> Pinterest</a>
-              <a href="#"><i class="social foundicon-rss"></i> Rss</a>
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 <br /><br /><br />
