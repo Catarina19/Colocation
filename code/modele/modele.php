@@ -72,3 +72,31 @@ function create_membre()
         echo "Erreur : ".$e->getMessage();
     }
 }
+
+// Prendre les données des appartements
+function afficher_appart()
+{
+    $dataDirectory = "Json";
+    $dataFileName = "Appartement.json";
+
+    // Charge le fichier
+    $data = json_decode(file_get_contents("$dataDirectory/$dataFileName"), true);
+
+    return $data;
+}
+
+/*$dataDirectory = "data";
+$dataFileName = "mydata.json";
+
+if (file_exists("$dataDirectory/$dataFileName")) // the file already exists -> load it
+{
+    $data = json_decode(file_get_contents("$dataDirectory/$dataFileName"),true);
+}
+else
+{
+    if (!file_exists($dataDirectory)) // Check if data directory exists
+    {
+        mkdir($dataDirectory); // if not create it
+    }
+    $data = getData(); // Initialize data with fixed values
+}*/

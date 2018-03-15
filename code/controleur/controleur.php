@@ -18,7 +18,8 @@ function erreur($e)
 
 function appartement()
 {
-  require 'vue/vue_appartement.php';
+    $resultat = afficher_appart();
+    require 'vue/vue_appartement.php';
 }
 
 // ----------------- Fontions en lien avec l'ajout d'appartements-----------------

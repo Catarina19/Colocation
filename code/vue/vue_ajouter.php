@@ -42,7 +42,6 @@ $titre = 'Collocation - Ajouter une proposition';
             </tr>
             <tr>
                 <td><input class="btn" type="submit" value="Confirmer"/></td>
-                <td></td><td></td><td></td>
             </tr>
         </table>
     </form>
