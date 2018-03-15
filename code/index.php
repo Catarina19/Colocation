@@ -29,10 +29,10 @@ try
       case 'vue_inscription' :
           inscription();
           break;
-      case 'vue_ajouter' :
+      case 'vue_ajouter' : // Pas encore ajouté
           ajouter();
           break;
-        case 'ajout' :
+        case 'ajout' : // Déjà ajouté
             ajout();
             break;
       case 'vue_profil' :

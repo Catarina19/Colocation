@@ -1,1 +1,34 @@
-[{"Nom":"De Jesus","Prenom":"Catarina","Email":"cat.alexandra@hotmail.ch","Password":"$2y$10$bVPgoJoX83RCPitbRMkXGee\/\/.UhTMfwz0tBdZ38h4VeyFmj4CH0u","Tel":"1564646313","Naissance":"1999-06-19"},{"Nom":"Chavey","Prenom":"Jean-Philippe","Email":"jcy@cpnv.ch","Password":"$2y$10$Gutr4ZJUeW4vABcJCVOoIeWvstZO\/UZNp8s1zs9.rI.2t9SFStXVy","Tel":"0534645645","Naissance":"1985-06-15"},{"Nom":"voland","Prenom":"johan","Email":"johan.voland@cpnv.ch","Password":"$2y$10$2q6AO36mJGvzWY82PTzsjOMB1NYYe0XnGvgKXk9g\/sf7xEE4TIQ2S","Tel":"+33774170807","Naissance":"1999-12-02"}]
+[
+  {
+    "Nom": "De Jesus",
+    "Prenom": "Catarina",
+    "Email": "cat.alexandra@hotmail.ch",
+    "Password": "$2y$10$bVPgoJoX83RCPitbRMkXGee\/\/.UhTMfwz0tBdZ38h4VeyFmj4CH0u",
+    "Tel": "1564646313",
+    "Naissance": "1999-06-19"
+  },
+  {
+    "Nom": "Chavey",
+    "Prenom": "Jean-Philippe",
+    "Email": "jcy@cpnv.ch",
+    "Password": "$2y$10$Gutr4ZJUeW4vABcJCVOoIeWvstZO\/UZNp8s1zs9.rI.2t9SFStXVy",
+    "Tel": "0534645645",
+    "Naissance": "1985-06-15"
+  },
+  {
+    "Nom": "voland",
+    "Prenom": "johan",
+    "Email": "johan.voland@cpnv.ch",
+    "Password": "$2y$10$2q6AO36mJGvzWY82PTzsjOMB1NYYe0XnGvgKXk9g\/sf7xEE4TIQ2S",
+    "Tel": "+33774170807",
+    "Naissance": "1999-12-02"
+  },
+  {
+    "Nom": "user",
+    "Prenom": "user",
+    "Email": "user@cpnv.ch",
+    "Password": "$2y$10$dmFyZaY7QMJ4y8Gr\/1IdrOHnjv813m0faLkr\/lg.u6sRiN99p43qu",
+    "Tel": "4456546767657",
+    "Naissance": "0008-07-21"
+  }
+]

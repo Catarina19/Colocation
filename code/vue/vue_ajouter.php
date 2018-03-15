@@ -17,28 +17,31 @@ $titre = 'Collocation - Ajouter une proposition';
     <form class="form" method="POST" action="index.php?action=ajout">
         <table class="table">
             <tr>
+                <td>ID :</td>
+                <td><input type="text" name="id" value="<?=@$_POST['id'];?>"></td>
+
                 <td>Région : </td>
-                <td><input type="text" name="region" value="<?= @$_GET['region']; ?>"></td>
+                <td><input type="text" name="region" value="<?= @$_POST['region']; ?>"></td>
 
                 <td>Adresse : </td>
-                <td><input type="text" name="adresse" value="<?= @$_GET['adresse']; ?>"></td>
+                <td><input type="text" name="adresse" value="<?= @$_POST['adresse']; ?>"></td>
 
                 <td>NPA : </td>
-                <td><input type="text" name="npa" value="<?= @$_GET['npa']; ?>"></td>
+                <td><input type="text" name="npa" value="<?= @$_POST['npa']; ?>"></td>
             </tr>
             <tr>
                 <td>Ville : </td>
-                <td><input type="text" name="ville" value="<?= @$_GET['ville']; ?>"></td>
+                <td><input type="text" name="ville" value="<?= @$_POST['ville']; ?>"></td>
 
                 <td>Description : </td>
-                <td><input type="text" name="description" value="<?= @$_GET['description']; ?>"></td>
+                <td><input type="text" name="description" value="<?= @$_POST['description']; ?>"></td>
 
                 <td>Date de disponibilité : </td>
-                <td><input type="date" name="diponibilite" value="<?= @$_GET['disponibilite']; ?>"></td>
+                <td><input type="date" name="diponibilite" value="<?= @$_POST['disponibilite']; ?>"></td>
             </tr>
             <tr>
                 <td>Prix : </td>
-                <td><input type="text" name="prix" value="<?= @$_GET['prix']; ?>"></td>
+                <td><input type="text" name="prix" value="<?= @$_POST['prix']; ?>"></td>
             </tr>
             <tr>
                 <td><input class="btn" type="submit" value="Confirmer"/></td>

@@ -24,11 +24,13 @@ function appartement()
 
 // ----------------- Fontions en lien avec l'ajout d'appartements-----------------
 
+// Pas encore ajouté
 function ajouter()
 {
     require "vue/vue_ajouter.php";
 }
 
+// Déjà ajouté
 function ajout()
 {
     require "vue/vue_appartement.php";
