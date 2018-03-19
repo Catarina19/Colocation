@@ -85,7 +85,19 @@ function afficher_appart()
     return $data;
 }
 
-// Ajouter un appartment
+// Ajouter un appartement
 function add_appart()
 {
+    $dataDirectory = "Json";
+    $dataFileName = "Appartement.json";
+
+    // Récupération des informations
+    $titre = @$_POST['titre'];
+    $region = @$_POST['region'];
+    $adresse = @$_POST['adresse'];
+    $npa = @$_POST['npa'];
+    $ville = @$_POST['ville'];
+    $description = @$_POST['descritpion'];
+    $disponibilite = @$_POST['disponibilite'];
+    $prix = @$_POST['prix'];
 }

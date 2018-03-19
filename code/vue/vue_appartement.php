@@ -14,26 +14,20 @@ $titre = 'Collocation - Appartements';
 ?>
 
 <!-- Contenu -->
-    <h1>Les appartements</h1>
-
-    <table class="table textcolor">
+    <h1>Nos propositions</h1>
+    <table class="table table-hover">
 <!-- Affiche le contenu du fichier json dans un tableau -->
-    <tr>
-        <td>Région</td>
-        <td>Ville</td>
-        <td>Prix</td>
-    </tr>
 <?php foreach ($resultat as $valeur) { ?>
     <tr>
-        <td><?=$valeur['region'];?></td>
-        <td><?=$valeur['ville'];?></td>
-        <td><?=$valeur['prix'];?></td>
+        <td>[image]</td>
+        <td><?=$valeur['titre'];?></td>
+        <td><?=$valeur['description'];?></td>
         <td><a href="index.php">Détails</a></td>
     </tr>
-    </table>
 
 <?php
 }
+echo "</table>";
   $contenu=ob_get_clean();
   require "gabarit.php";
   ?>
