@@ -78,7 +78,7 @@ function Json()
     require 'vue_json.php';
 }
 
-// ----------------- Fonctions en lien avec login -------------------------
+// ----------------- Fonctions en lien avec profil -------------------------
 
 function profil()
 {
