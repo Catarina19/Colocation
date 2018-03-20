@@ -1,6 +1,6 @@
 <?php
 
-function checkPass($email, $password){
+function checkPass($email, $password, $nom, $prenom){
     // ============== Load data ================
 
     $dataFileName = "Json/Membre.json";
@@ -17,8 +17,13 @@ function checkPass($email, $password){
         }
         if ($membre->Email == $identity){
             $hash = $membre->Password;
+            $nom = $membre->Nom;
+            $prenom = $membre->Prenom;
         }
     }
+
+    $_SESSION['nom'] = $nom;
+    $_SESSION['prenom'] = $prenom;
 
     if (password_verify($password, $hash)) {
         return true;

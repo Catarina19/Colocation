@@ -63,11 +63,11 @@ function login()
     $prenom = @$_POST['prenom'];
 
     if(!($email == "") && !($password == "")) {
-        $resultat = checkPass($email, $password);
+        $resultat = checkPass($email, $password, $nom, $prenom);
         if ($resultat) {
+
             $_SESSION['email'] = $email;
-            $_SESSION['nom'] = $nom;
-            $_SESSION['prenom'] = $prenom;
+
             require "vue/vue_login_success.php";
         } else {
             $erreurmdp = 1;

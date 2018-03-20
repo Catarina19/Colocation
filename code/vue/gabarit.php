@@ -92,7 +92,9 @@
                         <li>
                         <?php if(isset($_SESSION['email'])) :?>
                             <li><a href="index.php?action=vue_ajouter"><i class="general foundicon-plus icon"></i></a></li>
-                            <li><a href="index.php?action=vue_profil">Prenom Nom</a></li>
+
+
+                            <li><a href="index.php?action=vue_profil"><?= $_SESSION['prenom']; ?> <?= $_SESSION['nom']; ?></a></li>
                         <?php else : ?>
                             <?php if(@$_GET['action']=="vue_inscription") :?>
                                 <li><a href="index.php?action=vue_inscription">S'inscrire</a></li>
