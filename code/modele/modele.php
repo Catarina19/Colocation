@@ -85,7 +85,7 @@ function afficher_appart()
     return $data;
 }
 
-// Ajouter un appartement
+// Créer un nouvel appartement
 function add_appart()
 {
     $dataDirectory = "Json";
@@ -97,7 +97,44 @@ function add_appart()
     $adresse = @$_POST['adresse'];
     $npa = @$_POST['npa'];
     $ville = @$_POST['ville'];
-    $description = @$_POST['descritpion'];
+    $description = @$_POST['description'];
     $disponibilite = @$_POST['disponibilite'];
     $prix = @$_POST['prix'];
+
+    $email = $_SESSION['email'];
+
+    try{
+        // On essaye de récupérer le contenu existant
+        $data = file_get_contents("$dataDirectory/$dataFileName");
+
+        if( !$data || strlen($data) == 0 ) {
+            // On crée un tableau JSON
+            $tableau_pour_json = array();
+        } else {
+            // On récupère le JSON dans un tableau PHP
+            $tableau_pour_json = json_decode($data, true);
+        }
+
+        // Inscription des données
+        $newAppart = new stdClass();
+
+        $newAppart -> titre = $titre;
+        $newAppart -> region = $region;
+        $newAppart -> adresse = $adresse;
+        $newAppart -> npa = $npa;
+        $newAppart -> ville = $ville;
+        $newAppart -> description = $description;
+        $newAppart -> date_disponibilite = $disponibilite;
+        $newAppart -> prix = $prix;
+        $newAppart -> email_proprietaire = $email;
+
+        $tableau_pour_json [] = $newAppart;
+        // Réencodage du json
+        $contenu_json = json_encode($tableau_pour_json);
+
+        // Stockage du json dans son fichier
+        file_put_contents("$dataDirectory/$dataFileName", $contenu_json);
+    }catch (Exception $e){
+        echo "Erreur : ".$e -> getMessage();
+    }
 }

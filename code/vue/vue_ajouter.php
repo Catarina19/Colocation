@@ -17,32 +17,31 @@ $titre = 'Collocation - Ajouter une proposition';
     <form class="form" method="POST" action="index.php?action=ajout">
         <table class="table">
             <tr>
-                <!-- Le champ ID devra être enlevé (maquette) -->
                 <td>Titre :</td>
-                <td><input type="text" name="titre" value="<?=@$_POST['titre'];?>"></td>
+                <td><input type="text" name="titre" value="<?=@$_POST['titre'];?>" required></td>
 
                 <td>Région : </td>
-                <td><input type="text" name="region" value="<?= @$_POST['region']; ?>"></td>
+                <td><input type="text" name="region" value="<?= @$_POST['region']; ?>" required></td>
 
                 <td>Adresse : </td>
-                <td><input type="text" name="adresse" value="<?= @$_POST['adresse']; ?>"></td>
+                <td><input type="text" name="adresse" value="<?= @$_POST['adresse']; ?>" required></td>
             </tr>
             <tr>
                 <td>NPA : </td>
-                <td><input type="text" name="npa" value="<?= @$_POST['npa']; ?>"></td>
+                <td><input type="text" name="npa" value="<?= @$_POST['npa']; ?>" required></td>
 
                 <td>Ville : </td>
-                <td><input type="text" name="ville" value="<?= @$_POST['ville']; ?>"></td>
+                <td><input type="text" name="ville" value="<?= @$_POST['ville']; ?>" required></td>
 
                 <td>Description : </td>
-                <td><input type="text" name="description" value="<?= @$_POST['description']; ?>"></td>
+                <td><input type="text" name="description" value="<?= @$_POST['description']; ?>" required></td>
             </tr>
             <tr>
                 <td>Date de disponibilité : </td>
-                <td><input type="date" name="diponibilite" value="<?= @$_POST['disponibilite']; ?>"></td>
+                <td><input type="date" name="disponibilite" value="<?= @$_POST['disponibilite']; ?>" required></td>
 
                 <td>Prix : </td>
-                <td><input type="text" name="prix" value="<?= @$_POST['prix']; ?>"></td>
+                <td><input type="text" name="prix" value="<?= @$_POST['prix']; ?>" required></td>
             </tr>
             <tr>
                 <td><input class="btn" type="submit" value="ajouter"/></td>

@@ -1,1 +1,50 @@
-[{"Nom":"De Jesus","Prenom":"Catarina","Email":"cat.alexandra@hotmail.ch","Password":"$2y$10$bVPgoJoX83RCPitbRMkXGee\/\/.UhTMfwz0tBdZ38h4VeyFmj4CH0u","Tel":"1564646313","Naissance":"1999-06-19"},{"Nom":"Chavey","Prenom":"Jean-Philippe","Email":"jcy@cpnv.ch","Password":"$2y$10$Gutr4ZJUeW4vABcJCVOoIeWvstZO\/UZNp8s1zs9.rI.2t9SFStXVy","Tel":"0534645645","Naissance":"1985-06-15"},{"Nom":"voland","Prenom":"johan","Email":"johan.voland@cpnv.ch","Password":"$2y$10$2q6AO36mJGvzWY82PTzsjOMB1NYYe0XnGvgKXk9g\/sf7xEE4TIQ2S","Tel":"+33774170807","Naissance":"1999-12-02"},{"Nom":"Carrel","Prenom":"Xavier","Email":"xavier.carrel@cpnv.ch","Password":"$2y$10$ocxJw3Fl.oCvbJkEtvYtTO\/zzUGUC3tEaLS5uCwWzzjAcynnxMn4O","Tel":"123456","Naissance":"1991-01-29"},{"Nom":"hkjhkj","Prenom":"dhgfk","Email":"xavier.carrel@cpnv.ch","Password":"$2y$10$7ZWfVqmsHzy47DtHY.LRSukMdPWEB8Vox9Ddxyb9Il\/dwgQpu6Weu","Tel":"0792103731","Naissance":"1999-06-19"}]
+[
+  {
+    "Nom": "De Jesus",
+    "Prenom": "Catarina",
+    "Email": "cat.alexandra@hotmail.ch",
+    "Password": "$2y$10$bVPgoJoX83RCPitbRMkXGee\/\/.UhTMfwz0tBdZ38h4VeyFmj4CH0u",
+    "Tel": "1564646313",
+    "Naissance": "1999-06-19"
+  },
+  {
+    "Nom": "Chavey",
+    "Prenom": "Jean-Philippe",
+    "Email": "jcy@cpnv.ch",
+    "Password": "$2y$10$Gutr4ZJUeW4vABcJCVOoIeWvstZO\/UZNp8s1zs9.rI.2t9SFStXVy",
+    "Tel": "0534645645",
+    "Naissance": "1985-06-15"
+  },
+  {
+    "Nom": "voland",
+    "Prenom": "johan",
+    "Email": "johan.voland@cpnv.ch",
+    "Password": "$2y$10$2q6AO36mJGvzWY82PTzsjOMB1NYYe0XnGvgKXk9g\/sf7xEE4TIQ2S",
+    "Tel": "+33774170807",
+    "Naissance": "1999-12-02"
+  },
+  {
+    "Nom": "Carrel",
+    "Prenom": "Xavier",
+    "Email": "xavier.carrel@cpnv.ch",
+    "Password": "$2y$10$ocxJw3Fl.oCvbJkEtvYtTO\/zzUGUC3tEaLS5uCwWzzjAcynnxMn4O",
+    "Tel": "123456",
+    "Naissance": "1991-01-29"
+  },
+  {
+    "Nom": "hkjhkj",
+    "Prenom": "dhgfk",
+    "Email": "xavier.carrel@cpnv.ch",
+    "Password": "$2y$10$7ZWfVqmsHzy47DtHY.LRSukMdPWEB8Vox9Ddxyb9Il\/dwgQpu6Weu",
+    "Tel": "0792103731",
+    "Naissance": "1999-06-19"
+  },
+  {
+    "Nom": "user",
+    "Prenom": "user",
+    "Email": "user@cpnv.ch",
+    "Password": "$2y$10$ubK4tLEM15QNaHM5zzwJ5e5c5Ds6jSN\/OMtgEM.JewD4IogoULTCG",
+    "Tel": "2123213213324",
+    "Naissance": "51212-05-04"
+  }
+]

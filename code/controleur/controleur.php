@@ -30,9 +30,11 @@ function ajouter()
     require "vue/vue_ajouter.php";
 }
 
-// Déjà ajouté
+// Après avoir inscrit des données
 function ajout()
 {
+    add_appart();
+    $resultat = afficher_appart();
     require "vue/vue_appartement.php";
 }
 
@@ -56,10 +58,16 @@ function login()
     $email = @$_POST['email'];
     $password = @$_POST['password'];
 
+    // Pour afficher le nom et le prénom en haut de l'écran
+    $nom = @$_POST['nom'];
+    $prenom = @$_POST['prenom'];
+
     if(!($email == "") && !($password == "")) {
         $resultat = checkPass($email, $password);
         if ($resultat) {
             $_SESSION['email'] = $email;
+            $_SESSION['nom'] = $nom;
+            $_SESSION['prenom'] = $prenom;
             require "vue/vue_login_success.php";
         } else {
             $erreurmdp = 1;
