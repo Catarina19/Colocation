@@ -48,7 +48,7 @@ function inscription()
 function enregistrer()
 {
     create_membre();
-    require "vue/vue_accueil.php";
+    require "vue/vue_login.php";
 }
 
 // ----------------- Fonctions en lien avec login -------------------------
