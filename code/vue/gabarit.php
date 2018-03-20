@@ -85,7 +85,6 @@
             </div>
           </div>
         </div>
-
         <div id="divMenuRight" class="pull-right">
             <div class="navbar">
                 <div class="nav-collapse collapse">
@@ -109,7 +108,7 @@
 
       </div>
     </div>
-
+  </div>
     <div class="contentArea">
 
       <div class="divPanel notop page-content">
@@ -134,37 +133,35 @@
     <div id="divFooter" class="footerArea">
         <div class="divPanel">
             <div class="row-fluid">
+                <div class="span12">
+                    <div class="span6" id="footerArea1">
+                        <h3>Informations</h3>
+                        <p>
+                            <a href="#" title="Terms of Use">A Propos</a><br />
+                            <a href="#" title="Privacy Policy">Conditions générales</a><br />
+                            <a href="#" title="FAQ">Aide / FAQ</a><br />
+                            <a href="#" title="Sitemap">Partenaires</a>
+                            <a href="#" title="Privacy Policy">Sécurité</a><br />
+                            <a href="#" title="FAQ">Blog</a><br />
+                        </p>
+                    </div>
 
-                <div class="span6" id="footerArea1">
-                    <h3>Informations</h3>
-                    <p>
-                        <a href="#" title="Terms of Use">A Propos</a><br />
-                        <a href="#" title="Privacy Policy">Conditions générales</a><br />
-                        <a href="#" title="FAQ">Aide / FAQ</a><br />
-                        <a href="#" title="Sitemap">Partenaires</a>
-                        <a href="#" title="Privacy Policy">Sécurité</a><br />
-                        <a href="#" title="FAQ">Blog</a><br />
-                    </p>
-                </div>
-
-                <div class="span3" id="footerArea2">
-                    <h3>Contact</h3>
-                    <ul id="contact-info">
-                        <li>
-                            <i class="general foundicon-phone icon"></i>
-                            <span class="field">Téléphone :</span>
+                    <div class="span6" id="footerArea2">
+                        <h3>Contact</h3>
+                        <ul id="contact-info">
+                            <li>
+                                <i class="general foundicon-phone icon"></i>
+                                <span class="field">Téléphone : +41 27 890 12 34</span>
+                            </li>
                             <br />
-                            +41 27 890 12 34
-                        </li>
-                        <li>
-                            <i class="general foundicon-mail icon"></i>
-                            <span class="field">Email :</span>
-                            <br />
-                            <a href="mailto:info@colocation.com" title="Email">info@colocation.com</a>
-                        </li>
-                    </ul>
+                            <li>
+                                <i class="general foundicon-mail icon"></i>
+                                <span class="field">Email :</span>
+                                <a href="mailto:info@colocation.com" title="Email">info@colocation.com</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-
             </div>
             <br />
 
@@ -181,7 +178,7 @@
             </div>
         </div>
     </div>
-  </div>
+</div>
 <br /><br /><br />
 
 <script src="contenu/scripts/jquery.min.js" type="text/javascript"></script>

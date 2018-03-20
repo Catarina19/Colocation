@@ -5,59 +5,21 @@ ob_start();
 $titre="Colocation - Accueil";
 ?>
 
-<div class="span12" id="divMain">
-  <h1>Nos activités</h1>
+<div class="span12" id="divMain" style="text-align: center;">
 
+    <br /><br /><br /><br />
 
-            <p>
-  Nous proposons aussi des cours privés ou en petits groupe (4 personnes maximum) pour tous les niveaux avec des moniteurs certifiés par l'école suisse de snowboard au prix de 60.- /heure.
-            </p>
+    <h1>Trouvez votre colocation idéale</h1>
 
-                    <br />
-                    <br />
+    <br /><br />
 
-	<div class="row-fluid">
-    <div class="span3">
-			<div class="box">
-				<i class="icon-wrench"></i>
-				<h4 class="title">Entretien</h4> <hr/>
-				<p>
-					Le matériel est toujours contrôlé avant d'être mis à disposition des clients. A chaque fois que vous louerez un snow, vous pouvez partir surfer tranquille.
-				</p>
-			</div>
-	</div>
+    <p>
+        Des milliers de Chambres à louer en Suisse et nouvelles personnes personnes à rencontrer.
+    </p>
 
-	<div class="span3">
-			<div class="box">
-				<i class="icon-leaf"></i>
-				<h4 class="title">Environnement</h4> <hr/>
-				<p>
-Nous veillons à respecter l'environnement en utilisant au maximum du matériel recyclable et en prenant de consommer un minimum d'énergie lors de nos activités au magasin,
-				</p>
-			</div>
-	</div>
+    <br /><br /><br /><br />
 
-	<div class="span3">
-			<div class="box">
-				<i class="icon-edit"></i>
-				<h4 class="title">Contrat</h4> <hr/>
-				<p>
-Un contrat sera signé à chaque location. D'autre part nous travaillons en étroite collaboration avec la Rega et garantissons des conditions de sauvetage optimales.
-				</p>
-			</div>
-	</div>
-
-	<div class="span3">
-			<div class="box">
-				<i class="icon-signal"></i>
-				<h4 class="title">Signal</h4> <hr/>
-				<p>
-					Pour ceux qui aiments les sensations forte, nous louons du matériel de protection d'avalanches.
-				</p>
-			</div>
-	</div>    </div>
-
-                </div>
+</div>
 
 <?php
   $contenu = ob_get_clean();
