@@ -143,3 +143,10 @@ function add_appart()
         echo "Erreur : ".$e -> getMessage();
     }
 }
+
+function filtre()
+{
+    // Position du fichier json
+    $dataDirectory = "Json";
+    $dataFileName = "Appartement.json";
+}

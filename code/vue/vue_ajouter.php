@@ -21,7 +21,14 @@ $titre = 'Collocation - Ajouter une proposition';
                 <td><input type="text" name="titre" value="<?=@$_POST['titre'];?>" required></td>
 
                 <td>Région : </td>
-                <td><input type="text" name="region" value="<?= @$_POST['region']; ?>" required></td>
+                <td>
+                    <select name="region">
+                        <option value="vaud">Vaud</option>
+                        <option value="fribourg">Fribourg</option>
+                        <option value="valais">Valais</option>
+                        <option value="grisons">Grisons</option>
+                    </select>
+                </td>
 
                 <td>Adresse : </td>
                 <td><input type="text" name="adresse" value="<?= @$_POST['adresse']; ?>" required></td>
@@ -41,7 +48,7 @@ $titre = 'Collocation - Ajouter une proposition';
                 <td><input type="date" name="disponibilite" value="<?= @$_POST['disponibilite']; ?>" required></td>
 
                 <td>Prix : </td>
-                <td><input type="text" name="prix" value="<?= @$_POST['prix']; ?>" required></td>
+                <td><input type="text" name="prix" value="<?= @$_POST['prix']; ?>" required> CHF</td>
             </tr>
             <tr>
                 <td><input class="btn" type="submit" value="ajouter"/></td>
