@@ -41,7 +41,9 @@ $titre = 'Collocation - Appartements';
 
 <!-- Affiche le contenu du fichier json dans un tableau -->
 <?php foreach ($resultat as $valeur) { ?>
-<?php if ($valeur['region'] == $_POST['filtreRegion']) ?>
+
+<!-- Sélectionne les offres selon le filtre -->
+<?php if ($valeur['region'] == $_POST['filtreRegion'] || $_POST['filtreRegion'] == "#"){ ?>
     <tr>
         <td><img src="../contenu/images/pic01.jpg"></td>
         <td><?=$valeur['titre'];?></td>
@@ -49,10 +51,11 @@ $titre = 'Collocation - Appartements';
         <td><?=$valeur['ville'];?></td>
         <td><a href="index.php">Détails</a></td>
     </tr>
-
+    <?php }else{ ?>
+    Aucune Offre disponible
+    <?php }} ?>
+    </table>
 <?php
-}
-echo "</table>";
   $contenu=ob_get_clean();
   require "gabarit.php";
   ?>
