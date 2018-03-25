@@ -23,10 +23,32 @@ $titre = 'Collocation - Ajouter une proposition';
                 <td>Région : </td>
                 <td>
                     <select name="region">
-                        <option value="vaud">Vaud</option>
+                        <option value="zurich">Zurich</option>
+                        <option value="berne">Berne</option>
+                        <option value="lucerne">Lucerne</option>
+                        <option value="uri">Uri</option>
+                        <option value="schwytz">Schwytz</option>
+                        <option value="obwald">Obwald</option>
+                        <option value="nidwald">Nidwald</option>
+                        <option value="glaris">Glaris</option>
+                        <option value="zoug">Zoug</option>
                         <option value="fribourg">Fribourg</option>
-                        <option value="valais">Valais</option>
+                        <option value="soleure">Soleure</option>
+                        <option value="bale-ville">Bâle-Ville</option>
+                        <option value="bale-campagne">Bâle-Campagne</option>
+                        <option value="schaffhouse">Schaffhouse</option>
+                        <option value="appenzell_rhodes-ext">Appenzell Rhode-Exérieures</option>
+                        <option value="appenzell_rhodes-int">Appenzell Rhode-Intérieures</option>
+                        <option value="st-gall">Saint-Gall</option>
                         <option value="grisons">Grisons</option>
+                        <option value="argovie">Argovie</option>
+                        <option value="thurgovie">Thurgovie</option>
+                        <option value="tessin">Tessin</option>
+                        <option value="vaud">Vaud</option>
+                        <option value="valais">Valais</option>
+                        <option value="neuchatel">Neuchâtel</option>
+                        <option value="geneve">Genêve</option>
+                        <option value="jura">Jura</option>
                     </select>
                 </td>
 
