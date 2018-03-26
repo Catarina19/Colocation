@@ -90,6 +90,7 @@ function Json()
 
 function profil()
 {
+    $resultat = afficher_appart();
     require 'vue/vue_profil.php';
 }
 
