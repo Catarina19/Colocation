@@ -18,22 +18,24 @@ $titre = 'Colocation - Login';
         </div>
 
         <?php foreach ($resultat as $valeur) { ?>
+            <?php if ($valeur['email_proprietaire'] == $_SESSION['email']){ ?>
             <div class="span8" id="profil_appart" style="border: 1px solid black; border-radius: 5px; padding: 15px; border-collapse: separate; margin: 5px">
                 <img src="../contenu/images/pic01.jpg">
                 <?= $valeur['titre']; ?>
                 <?= $valeur['description']; ?>
-                <?= $valeur['ville']; ?>
                 <a href="index.php">Détails</a>
             </div>
+            <?php } ?>
         <?php } ?>
     </div>
 
-    <br>
+<?php
+
+/*<br>
     <FORM ACTION="trait-new_fiche.php" method="POST" ENCTYPE="multipart/form-data">
         <input type="hidden" name=\"max_file_size" value="50000">
         <label for="title" class="float">Image : </label>  <input TYPE="file" NAME="image"><br>
-    </FORM>
+    </FORM>*/
 
-<?php
 $contenu=ob_get_clean();
 require "gabarit.php";

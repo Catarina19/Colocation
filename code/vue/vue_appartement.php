@@ -56,20 +56,20 @@ $titre = 'Collocation - Appartements';
 
 <!-- Sélectionne les offres selon le filtre -->
 <?php if ($valeur['region'] == @$_POST['filtreRegion'] || @$_POST['filtreRegion'] == "#"){ ?>
-        <div class="thumbnail">
-            <img src="../contenu/images/pic01.jpg" width="300" height="300" />
-            <h5><?=$valeur['titre'];?></h5>
-            <p><?=$valeur['description'];?></p>
+        <div class="span12" id="profil_appart" style="border: 1px solid black; border-radius: 5px; padding: 15px; border-collapse: separate; margin: 5px">
+            <img src="../contenu/images/pic01.jpg">
+            <?= $valeur['titre']; ?>
+            <?= $valeur['description']; ?>
             <a href="index.php">Détails</a>
         </div>
         <!-- Si on n'a appliqué aucun filtre affiche tout-->
     <?php }else if (@$_POST['filtreRegion'] == null){ ?>
-        <div class="thumbnail">
-        <img src="../contenu/images/pic01.jpg" width="300" height="300" />
-        <h5><?=$valeur['titre'];?></h5>
-    <p><?=$valeur['description'];?></p>
-    <a href="index.php">Détails</a>
-    </div>
+        <div class="span12" id="profil_appart" style="border: 1px solid black; border-radius: 5px; padding: 15px; border-collapse: separate; margin: 5px">
+            <img src="../contenu/images/pic01.jpg">
+            <?= $valeur['titre']; ?>
+            <?= $valeur['description']; ?>
+            <a href="index.php">Détails</a>
+        </div>
     <?php }} ?>
 
 <?php
