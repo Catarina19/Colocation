@@ -61,9 +61,10 @@ $titre = 'Collocation - Ajouter une proposition';
 
                 <td>Ville : </td>
                 <td><input type="text" name="ville" value="<?= @$_POST['ville']; ?>" required></td>
-
+            </tr>
+            <tr>
                 <td>Description : </td>
-                <td><input type="text" name="description" value="<?= @$_POST['description']; ?>" required></td>
+                <td><textarea name="description" required></textarea></td>
             </tr>
             <tr>
                 <td>Date de disponibilité : </td>
