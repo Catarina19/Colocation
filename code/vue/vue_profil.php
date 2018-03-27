@@ -1,7 +1,7 @@
 <?php
 
 ob_start();
-$titre = 'Colocation - Login';
+$titre = 'Colocation - Profil';
 ?>
     <div class="span12" id="divMain">
         <h1 style="text-align: center;">Votre Profil</h1>

@@ -32,9 +32,18 @@ try
       case 'vue_ajouter' :
           ajouter();
           break;
-        case 'ajout' :
-            ajout();
-            break;
+      case 'detail' :
+          detail();
+          break;
+      case 'ajout' :
+          ajout();
+          break;
+      case 'supprimer' :
+          supprimer();
+          break;
+      case 'modifier' :
+          modifier();
+          break;
       case 'vue_profil' :
           profil();
           break;

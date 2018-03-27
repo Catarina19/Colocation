@@ -60,7 +60,7 @@ $titre = 'Collocation - Appartements';
             <img src="../contenu/images/pic01.jpg">
             <?= $valeur['titre']; ?>
             <?= $valeur['description']; ?>
-            <a href="index.php">Détails</a>
+            <a href="index.php?action=detail">Détails</a>
         </div>
         <!-- Si on n'a appliqué aucun filtre affiche tout-->
     <?php }else if (@$_POST['filtreRegion'] == null){ ?>
@@ -68,7 +68,7 @@ $titre = 'Collocation - Appartements';
             <img src="../contenu/images/pic01.jpg">
             <?= $valeur['titre']; ?>
             <?= $valeur['description']; ?>
-            <a href="index.php">Détails</a>
+            <a href="index.php?action=detail">Détails</a>
         </div>
     <?php }} ?>
 

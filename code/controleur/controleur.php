@@ -22,6 +22,21 @@ function appartement()
     require 'vue/vue_appartement.php';
 }
 
+function detail()
+{
+    require "vue/vue_detail.php";
+}
+
+function supprimer()
+{
+    require "vue/vue_supprimer.php";
+}
+
+function modifier()
+{
+    require "vue/vue_modifier.php";
+}
+
 // ----------------- Fontions en lien avec l'ajout d'appartements-----------------
 
 // Pas encore ajouté
