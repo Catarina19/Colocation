@@ -60,9 +60,23 @@ $titre = 'Collocation - Ajouter une proposition';
                 <td>NPA : </td>
                 <td><input type="text" name="npa" value="<?= @$_POST['npa']; ?>" required></td>
 
-                <td>Ville/Commune : </td>
                 <td>
-                    <input type="text" name="ville" value="<?= @$_POST['ville']; ?>" required>
+                    <form>
+                        <input type="radio" name="ville/commune" value="buttonCommune" checked> Commune<br>
+                        <input type="radio" name="ville/commune" value="buttonVille"> Ville
+                    </form>
+                    <!-- Si la commune est prise -->
+                    <?php if ($_POST['radio'] == "buttonCommune"){ ?>
+                        <input type="text" name="ville" value="<?= @$_POST['ville']; ?>" required>
+                        <select name="ville" readonly="readonly">
+                            <option value="zurich">Zurich</option>
+                        </select>
+                    <?php } else {?>
+                        <input type="text" name="ville" value="<?= @$_POST['ville']; ?>" required readonly="readonly">
+                        <select name="ville">
+                            <option value="zurich">Zurich</option>
+                        </select>
+                    <?php } ?>
                 </td>
             </tr>
 

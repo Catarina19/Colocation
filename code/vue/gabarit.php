@@ -39,6 +39,8 @@
   <link href="http://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css">
 
   <link href="contenu/styles/custom.css" rel="stylesheet" type="text/css" />
+
+<link type="text/javascript" href="contenu/scripts/jquery.min-js"/>
 </head>
 <body id="pageBody">
 
