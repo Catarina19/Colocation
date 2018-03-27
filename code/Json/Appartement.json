@@ -1,1 +1,50 @@
-[{"titre":"777","region":"vaud","adresse":"Rue du colon 77","npa":"1462","ville":"Yvonand","description":"rdhztdfifuz","date_disponibilite":"2555-06-19","prix":"28888888","email_proprietaire":"cat.alexandra@hotmail.ch"},{"titre":"fhdjgdfdjgd","region":"zurich","adresse":"fdsfsdf","npa":"12123","ville":"sadas","description":"asdsdsfdsf","date_disponibilite":"4578-05-04","prix":"232134","email_proprietaire":"johan.voland@cpnv.ch"},{"titre":"fvkujg","region":"zurich","adresse":"fdsfsdf","npa":"12123","ville":"sadas","description":"rtsdjtivuhb","date_disponibilite":"2020-08-12","prix":"25555","email_proprietaire":"cat.alexandra@hotmail.ch"}]
+[
+  {
+    "id": 1,
+    "titre": "fdsfd",
+    "region": "zurich",
+    "adresse": "fdsfddf",
+    "npa": "234324",
+    "ville": "sdfsdf",
+    "description": "sffsfdf",
+    "date_disponibilite": "2018-03-01",
+    "prix": "313213",
+    "email_proprietaire": "johan.voland@cpnv.ch"
+  },
+  {
+    "id": 2,
+    "titre": "asddsad",
+    "region": "zurich",
+    "adresse": "sadd",
+    "npa": "23123",
+    "ville": "asdsd",
+    "description": "saddd",
+    "date_disponibilite": "2018-03-24",
+    "prix": "2133",
+    "email_proprietaire": "johan.voland@cpnv.ch"
+  },
+  {
+    "id": 3,
+    "titre": "dfsdfdsf",
+    "region": "zurich",
+    "adresse": "sdfdsfsf",
+    "npa": "2312",
+    "ville": "dsd",
+    "description": "saasd",
+    "date_disponibilite": "2018-03-03",
+    "prix": "213",
+    "email_proprietaire": "johan.voland@cpnv.ch"
+  },
+  {
+    "id": 4,
+    "titre": "weewqe",
+    "region": "zurich",
+    "adresse": "qwewqe",
+    "npa": "313312",
+    "ville": "eqwee",
+    "description": "ewqewqee",
+    "date_disponibilite": "2018-03-24",
+    "prix": "1233",
+    "email_proprietaire": "johan.voland@cpnv.ch"
+  }
+]

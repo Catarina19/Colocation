@@ -96,6 +96,7 @@ function add_appart()
     $dataDirectory = "Json";
     $dataFileName = "Appartement.json";
 
+
     // Récupération des informations
     $titre = @$_POST['titre'];
     $region = @$_POST['region'];
@@ -107,6 +108,8 @@ function add_appart()
     $prix = @$_POST['prix'];
 
     $email = $_SESSION['email'];
+    $id = $_SESSION['idAuto'];
+    $_SESSION['idAuto'] ++;
 
     try{
         // On essaye de récupérer le contenu existant
@@ -123,6 +126,7 @@ function add_appart()
         // Inscription des données
         $newAppart = new stdClass();
 
+        $newAppart -> id = $id;
         $newAppart -> titre = $titre;
         $newAppart -> region = $region;
         $newAppart -> adresse = $adresse;
