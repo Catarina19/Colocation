@@ -36,6 +36,8 @@ function supprimer()
 
 function modifier()
 {
+    $_SESSION['appart'] = $_GET['id'];
+    $resultat = afficher_appart();
     require "vue/vue_modifier.php";
 }
 

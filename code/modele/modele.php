@@ -148,9 +148,33 @@ function add_appart()
     }
 }
 
-function filtre()
+// Modifier un appartement
+function mofifierAppart()
 {
-    // Position du fichier json
     $dataDirectory = "Json";
     $dataFileName = "Appartement.json";
+
+    // Récupération des informations
+    $titre = @$_POST['titre'];
+    $region = @$_POST['region'];
+    $adresse = @$_POST['adresse'];
+    $npa = @$_POST['npa'];
+    $ville = @$_POST['ville'];
+    $description = @$_POST['description'];
+    $disponibilite = @$_POST['disponibilite'];
+    $prix = @$_POST['prix'];
+
+    $data = file_get_contents("$dataDirectory/$dataFileName");
+    if (isset($titre))
+    {
+        $data['titre'] = $titre;
+    }
+    if (isset($region))
+    {
+        $data['region'] = $region;
+    }
+    if (isset($adresse))
+    {
+        $data['adresse'] = $adresse;
+    }
 }

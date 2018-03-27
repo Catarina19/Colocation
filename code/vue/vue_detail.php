@@ -41,7 +41,7 @@ $titre = 'Collocation - Détails appartement';
     <p>Membre : <a href="#">Informations colocataire</a> <a href="#">Contacter</a></p><br>
     <p>
         Proprio :
-        <a href="index.php?action=modifier"><i class="general foundicon-edit icon"></i></a> -
+        <a href="index.php?action=modifier&id=<?= $valeur['id'];?>"><i class="general foundicon-edit icon"></i></a>
         <a href="index.php?action=supprimer"><i class="general foundicon-remove icon"></i></a>
     </p>
 </div>
