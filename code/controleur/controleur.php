@@ -24,6 +24,8 @@ function appartement()
 
 function detail()
 {
+    $_SESSION['appart'] = $_GET['id'];
+    $resultat = afficher_appart();
     require "vue/vue_detail.php";
 }
 
