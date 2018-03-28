@@ -8,33 +8,33 @@ $titre = 'Collocation - Détails appartement';
 <?php foreach ($resultat as $valeur) { ?>
 <?php if ($valeur['id'] == $_SESSION['appart']){ ?>
 
-    <h1 style="text-align: center"><?= $valeur['titre']; ?></h1>
+        <h1 style="text-align: center"><?= $valeur['titre']; ?></h1>
 
-    <div class="camera_full_width">
-        <div id="camera_wrap">
-            <div data-src="contenu/slider-images/test_1.jpg" ><div class="camera_caption fadeFromBottom cap1">Les derniers modèles toujours à disposition.</div></div>
-            <div data-src="contenu/slider-images/test_2.jpg" ><div class="camera_caption fadeFromBottom cap2">Découvrez des paysages fabuleux avec des sensations.</div></div>
+        <div class="camera_full_width">
+            <div id="camera_wrap">
+                <div data-src="contenu/slider-images/test_1.jpg" ><div class="camera_caption fadeFromBottom cap1">Les derniers modèles toujours à disposition.</div></div>
+                <div data-src="contenu/slider-images/test_2.jpg" ><div class="camera_caption fadeFromBottom cap2">Découvrez des paysages fabuleux avec des sensations.</div></div>
+            </div>
+            <br style="clear:both"/><div style="margin-bottom:40px"></div>
         </div>
-        <br style="clear:both"/><div style="margin-bottom:40px"></div>
-    </div>
 
-    <div class="span12">
-        <div class="span2">
-            Emplacement :<br><br><br><br>
-            Date de disponibilité :<br><br>
-            Prix :<br><br>
-            Description :<br><br>
-        </div>
-        <div class="span8">
-            <?= $valeur['adresse']; ?><br>
-            <?= $valeur['npa']; ?> <?= $valeur['ville']; ?><br>
-            Dans la région de <?= $valeur['region']; ?><br><br>
+        <div class="span12">
+            <div class="span2">
+                Emplacement :<br><br><br><br>
+                Date de disponibilité :<br><br>
+                Prix :<br><br>
+                Description :<br><br>
+            </div>
+            <div class="span8">
+                <?= $valeur['adresse']; ?><br>
+                <?= $valeur['npa']; ?> <?= $valeur['ville']; ?><br>
+                Dans la région de <?= $valeur['region']; ?><br><br>
 
-            <?= $valeur['date_disponibilite']; ?><br><br>
-            <?= $valeur['prix']; ?> CHF<br><br>
-            <?= $valeur['description']; ?><br><br>
+                <?= $valeur['date_disponibilite']; ?><br><br>
+                <?= $valeur['prix']; ?> CHF<br><br>
+                <?= $valeur['description']; ?><br><br>
+            </div>
         </div>
-    </div>
 <?php }}?>
 <div class="span12">
     <p>Visiteur : <a href="#">Informations colocataire</a> <a href="#">Message</a></p><br>
@@ -46,18 +46,7 @@ $titre = 'Collocation - Détails appartement';
     </p>
 </div>
 <?php
-/*<div id="headerSeparator"></div>
 
-        <div class="camera_full_width">
-          <div id="camera_wrap">
-            <div data-src="contenu/slider-images/5.jpg" ><div class="camera_caption fadeFromBottom cap1">Les derniers modèles toujours à disposition.</div></div>
-            <div data-src="contenu/slider-images/1.jpg" ><div class="camera_caption fadeFromBottom cap2">Découvrez des paysages fabuleux avec des sensations.</div></div>
-            <div data-src="contenu/slider-images/2.jpg" ></div>
-          </div>
-          <br style="clear:both"/><div style="margin-bottom:40px"></div>
-        </div>
-
-        <div id="headerSeparator2"></div>*/
 $contenu=ob_get_clean();
 require "gabarit.php";
 ?>
