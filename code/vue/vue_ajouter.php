@@ -69,6 +69,37 @@ $titre = 'Collocation - Ajouter une proposition';
                     <?php if ($_POST['radio'] == "buttonCommune"){ ?>
                         <input type="text" name="ville" value="<?= @$_POST['ville']; ?>" required>
                         <select name="ville" readonly="readonly">
+                            <option value="aarau">Aarau</option>
+                            <option value="adliswil">Adliswil</option>
+                            <option value="Aesch">Aesch</option>
+                            <option value="aigle">Aigle</option>
+                            <option value="altdorf">Altdorf</option>
+                            <option value="appenzell">Appenzell</option>
+                            <option value="bale">Bâle</option>
+                            <option value="berne">Berne</option>
+                            <option value="bienne">Bienne</option>
+                            <option value="bussigny">Bussigny</option>
+                            <option value="carouge">Carouge</option>
+                            <option value="ecublens">Ecublens</option>
+                            <option value="fribourg">Fribourg</option>
+                            <option value="geneve">Genève</option>
+                            <option value="gland">Gland</option>
+                            <option value="chauxdefonds">La Chaux-de-Fonds</option>
+                            <option value="lausanne">Lausanne</option>
+                            <option value="lucerne">Lucerne</option>
+                            <option value="lugano">Lugano</option>
+                            <option value="meyrin">Meyrin</option>
+                            <option value="montreux">Montreux</option>
+                            <option value="morat">Morat</option>
+                            <option value="morges">Morges</option>
+                            <option value="neuchatel">Neuchâtel</option>
+                            <option value="nyon">Nyon</option>
+                            <option value="payerne">Payerne</option>
+                            <option value="prilly">Prilly</option>
+                            <option value="renens">Renens</option>
+                            <option value="sion">Sion</option>
+                            <option value="vevey">Vevey</option>
+                            <option value="yverdon">Yverdon-les-Bains</option>
                             <option value="zurich">Zurich</option>
                         </select>
                     <?php } else {?>
