@@ -52,6 +52,10 @@
     <div class="row-fluid">
       <div class="span12">
 
+          <div id="divLogo" class="pull-left span2">
+              <a href="index.html"><img src="contenu/images/appartager_logo.png"></a><br />
+          </div>
+
         <div id="divMenuLeft" class="pull-left">
           <div class="navbar">
             <button type="button" class="btn btn-navbar-highlight btn-large btn-primary" data-toggle="collapse" data-target=".nav-collapse">
