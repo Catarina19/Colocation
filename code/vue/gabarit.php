@@ -39,8 +39,6 @@
   <link href="http://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css">
 
   <link href="contenu/styles/custom.css" rel="stylesheet" type="text/css" />
-
-<link type="text/javascript" href="contenu/scripts/jquery.min-js"/>
 </head>
 <body id="pageBody">
 
@@ -192,7 +190,7 @@
 <script src="contenu/scripts/jquery.min.js" type="text/javascript"></script>
 <script src="contenu/scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="contenu/scripts/default.js" type="text/javascript"></script>
-
+<script src="js/js.js" type="text/javascript"></script>
 
 <script src="contenu/scripts/carousel/jquery.carouFredSel-6.2.0-packed.js" type="text/javascript"></script><script type="text/javascript">$('#list_photos').carouFredSel({ responsive: true, width: '100%', scroll: 2, items: {width: 320,visible: {min: 2, max: 6}} });</script><script src="contenu/scripts/camera/scripts/camera.min.js" type="text/javascript"></script>
 <script src="contenu/scripts/easing/jquery.easing.1.3.js" type="text/javascript"></script>
