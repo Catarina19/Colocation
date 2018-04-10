@@ -24,21 +24,42 @@ function appartement()
 
 function detail()
 {
-    $_SESSION['appart'] = $_GET['id'];
-    $resultat = afficher_appart();
-    require "vue/vue_detail.php";
+        $_SESSION['appart'] = $_GET['id'];
+        $resultat = afficher_appart();
+        require "vue/vue_detail.php";
 }
 
 function supprimer()
 {
-    require "vue/vue_supprimer.php";
+    if (isset($_GET['id']))
+    {
+        supprAppart();
+        require "vue/vue_supprimer.php";
+    }
+    else
+    {
+        $resultat = afficher_appart();
+        require "vue/vue_appartement.php";
+    }
 }
 
 function modifier()
 {
-    $_SESSION['appart'] = $_GET['id'];
-    $resultat = afficher_appart();
-    require "vue/vue_modifier.php";
+    if (isset($_GET['id']))
+    {
+        $resultat = afficher_appart();
+        require "vue/vue_modifier.php";
+        exit();
+    }
+    else
+    {
+        // Fonction de modification des données
+        mofifierAppart();
+
+        // Afficher le résultat
+        $resultat = afficher_appart();
+        require "vue/vue_detail.php";
+    }
 }
 
 // ----------------- Fontions en lien avec l'ajout d'appartements-----------------

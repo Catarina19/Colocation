@@ -50,29 +50,12 @@ $titre = 'Collocation - Modifier appartement';
                 <td>Adresse : </td>
                 <td><input type="text" name="adresse" value="<?= @$valeur['adresse']; ?>" required></td>
             </tr>
-            <!-- Gestion de la ville/commune -->
             <tr>
                 <td>NPA : </td>
                 <td><input type="text" name="npa" value="<?= @$valeur['npa']; ?>" required></td>
 
-                <td>
-                    <!-- <form>
-                        <input type="radio" name="ville/commune" value="buttonCommune" checked> Commune<br>
-                        <input type="radio" name="ville/commune" value="buttonVille"> Ville
-                    </form>
-                    <!-- Si la commune est prise -->
-                    <?php //if ($_POST['radio'] == "buttonCommune"){ ?>
-                        Ville : <input type="text" name="ville" value="<?= @$valeur['ville']; ?>" required>
-                        <select name="ville" readonly="readonly">
-                            <option value="zurich">Zurich</option>
-                        </select>
-                    <?php //} else {?>
-                       <!-- <input type="text" name="ville" value="<?= @$valeur['ville']; ?>" required readonly="readonly">
-                        <select name="ville">
-                            <option value="zurich">Zurich</option>
-                        </select>-->
-                    <?php// } ?>
-                </td>
+                <td>Ville : </td>
+                <td><input type="text" name="ville" value="<?= @$valeur['ville']; ?>" required></td>
             </tr>
 
             <tr>

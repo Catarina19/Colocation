@@ -38,10 +38,10 @@ try
       case 'ajout' :
           ajout();
           break;
-      case 'supprimer' :
+      case 'vue_supprimer' :
           supprimer();
           break;
-      case 'modifier' :
+      case 'vue_modif' :
           modifier();
           break;
       case 'vue_profil' :

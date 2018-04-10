@@ -108,7 +108,7 @@ function add_appart()
     $prix = @$_POST['prix'];
 
     $email = $_SESSION['email'];
-    $id = $_SESSION['idAuto'];
+    @$id = $_SESSION['idAuto'];
     $_SESSION['idAuto'] ++;
 
     try{
@@ -165,16 +165,60 @@ function mofifierAppart()
     $prix = @$_POST['prix'];
 
     $data = file_get_contents("$dataDirectory/$dataFileName");
+    $appartement = $data;
     if (isset($titre))
     {
-        $data['titre'] = $titre;
+        $appartement['titre'] = $titre;
     }
     if (isset($region))
     {
-        $data['region'] = $region;
+        $appartement['region'] = $region;
     }
     if (isset($adresse))
     {
-        $data['adresse'] = $adresse;
+        $appartement['adresse'] = $adresse;
+    }
+    if (isset($npa))
+    {
+        $appartement['npa'] = $npa;
+    }
+    if (isset($ville))
+    {
+        $appartement['ville'] = $ville;
+    }
+    if (isset($description))
+    {
+        $appartement['description'] = $description;
+    }
+    if (isset($disponibilite))
+    {
+        $appartement['date_disponibilte'] = $disponibilite;
+    }
+    if (isset($prix))
+    {
+        $appartement['prix'] = $prix;
     }
 }
+
+// Suppression d'un appartement
+function supprAppart()
+{
+    $dataDirectory = "Json";
+    $dataFileName = "Appartement.json";
+    $data = file_get_contents("$dataDirectory/$dataFileName");
+
+    $id = $_GET['id'];
+
+    $data[$id]['id'];
+    for ($i = $id; $i < count($data)-1; $i++)
+    {
+        $data[$i] = $data[$i+1];
+    }
+    unset($data[$id]);
+}
+
+/*for ($i=$index; $i < count($data)-1; $i++) // shift all elements beyond the one we must delete
+{
+    $data[$i] = $data[$i+1];
+}
+unset($data[$i]); // destroy the last one*/
