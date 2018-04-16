@@ -73,6 +73,7 @@ $titre = 'Collocation - Modifier appartement';
                 <td><input class="btn" type="submit" value="ajouter"/></td>
             </tr>
         </table>
+        <input type="hidden" name="id" value="<?= @$valeur['id']; ?>">
         <?php }}?>
     </form>
 

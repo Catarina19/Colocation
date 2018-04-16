@@ -11,6 +11,9 @@ try
 {
   if (isset($_GET['action']))
   {
+      $dataDirectory = "Json";
+      $dataFileName = "Appartement.json";
+      $data = json_decode(file_get_contents("$dataDirectory/$dataFileName"));
     $action = $_GET['action'];
     switch ($action)
     {
@@ -50,10 +53,14 @@ try
       case 'vue_login' :
           login();
           break;
+        case 'vue_supprimer_confirmer' :
+            confirmSuppr();
+            break;
       default :
           throw new Exception("Action non valide");
           break;
     }
+      file_put_contents("$dataDirectory/$dataFileName", json_encode($data));
   }
   else
     accueil();

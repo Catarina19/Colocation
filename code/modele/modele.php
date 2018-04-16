@@ -33,7 +33,8 @@ function checkPass($email, $password, $nom, $prenom){
 
 }
 
-// --- create a new membre
+//----------------------------------------- Créer un nouveau membre ----------------------------------------------------
+
 function create_membre()
 {
     $dataDirectory = "Json";
@@ -78,7 +79,8 @@ function create_membre()
     }
 }
 
-// Prendre les données des appartements
+//--------------------------------------------- Prendre les données des appartements -----------------------------------
+
 function afficher_appart()
 {
     $dataDirectory = "Json";
@@ -90,7 +92,8 @@ function afficher_appart()
     return $data;
 }
 
-// Créer un nouvel appartement
+//------------------------------------ Créer un nouvel appartement -----------------------------------------------------
+
 function add_appart()
 {
     $dataDirectory = "Json";
@@ -148,13 +151,16 @@ function add_appart()
     }
 }
 
-// Modifier un appartement
+//------------------------------- Modifier un appartement --------------------------------------------------------------
+
 function mofifierAppart()
 {
-    $dataDirectory = "Json";
-    $dataFileName = "Appartement.json";
+    global $data;
+
+    // Récupération du fichier JSON
 
     // Récupération des informations
+    $id = intval(@$_POST['id']);
     $titre = @$_POST['titre'];
     $region = @$_POST['region'];
     $adresse = @$_POST['adresse'];
@@ -164,49 +170,65 @@ function mofifierAppart()
     $disponibilite = @$_POST['disponibilite'];
     $prix = @$_POST['prix'];
 
-    $data = file_get_contents("$dataDirectory/$dataFileName");
-    $appartement = $data;
+    // Ouverture du fichier JSON et préparation de l'écriture dans le fichier
+
+
+    // Sélection de l'appartement désiré (selon son ID)
+    foreach ($data as $i => $appart)
+    {
+        if ($appart->id == $id)
+        {
+            $index = $i;
+            break;
+        }
+    }
+
+    // Réécriture des champs
     if (isset($titre))
     {
-        $appartement['titre'] = $titre;
+        $data[$index]->titre = $titre;
     }
     if (isset($region))
     {
-        $appartement['region'] = $region;
+        $data[$index]->region = $region;
     }
     if (isset($adresse))
     {
-        $appartement['adresse'] = $adresse;
+        $data[$index]->adresse = $adresse;
     }
     if (isset($npa))
     {
-        $appartement['npa'] = $npa;
+        $data[$index]->npa = $npa;
     }
     if (isset($ville))
     {
-        $appartement['ville'] = $ville;
+        $data[$index]->ville = $ville;
     }
     if (isset($description))
     {
-        $appartement['description'] = $description;
+        $data[$index]->description = $description;
     }
     if (isset($disponibilite))
     {
-        $appartement['date_disponibilte'] = $disponibilite;
+        $data[$index]->date_disponibilte = $disponibilite;
     }
     if (isset($prix))
     {
-        $appartement['prix'] = $prix;
+        $data[$index]->prix = $prix;
     }
+
 }
 
-// Suppression d'un appartement
+//----------------------------------- Suppression d'un appartement -----------------------------------------------------
+
 function supprAppart()
 {
+    // Récupération du fichier JSON
     $dataDirectory = "Json";
     $dataFileName = "Appartement.json";
     $data = file_get_contents("$dataDirectory/$dataFileName");
 
+    // Récupération de l'ID de l'appartement à supprimer
     $id = $_GET['id'];
 
     $data[$id]['id'];

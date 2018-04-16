@@ -16,6 +16,7 @@ function erreur($e)
 
 // ----------------- Fonctions en lien avec les appartements ---------------------
 
+// Afficher l'appartement
 function appartement()
 {
     $resultat = afficher_appart();
@@ -27,6 +28,11 @@ function detail()
         $_SESSION['appart'] = $_GET['id'];
         $resultat = afficher_appart();
         require "vue/vue_detail.php";
+}
+
+function confirmSuppr()
+{
+    require "vue/vue_supprimer_confirmer.php";
 }
 
 function supprimer()
