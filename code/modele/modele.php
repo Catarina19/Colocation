@@ -37,9 +37,11 @@ function checkPass($email, $password, $nom, $prenom){
 
 function create_membre()
 {
+    // Destination du fichier de stockage des membres
     $dataDirectory = "Json";
     $dataFileName = "Membre.json";
 
+    // Récupération du formulaire d'inscription
     $nom = @$_POST['nom'];
     $prenom = @$_POST['prenom'];
     $email = @$_POST['email'];
@@ -59,8 +61,8 @@ function create_membre()
             $tableau_pour_json = json_decode($data, true);
         }
 
+        // Création du nouveau membre
         $newmembre = new stdClass();
-
         $newmembre -> Nom = $nom;
         $newmembre -> Prenom = $prenom;
         $newmembre -> Email = $email;
@@ -178,7 +180,7 @@ function mofifierAppart()
             break;
         }
     }
-    
+
     // Réécriture des champs
     if (isset($titre))
     {

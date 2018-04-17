@@ -31,6 +31,8 @@ function detail()
         require "vue/vue_detail.php";
 }
 
+//----------------------------- Fonctions en lien avec la modification/suppression d'appartements ----------------------
+
 // Confirmation de la suppression
 function confirmSuppr()
 {

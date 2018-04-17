@@ -11,9 +11,11 @@ try
 {
   if (isset($_GET['action']))
   {
+      // Sélection du stockage des appartements
       $dataDirectory = "Json";
       $dataFileName = "Appartement.json";
       $data = json_decode(file_get_contents("$dataDirectory/$dataFileName"));
+
     $action = $_GET['action'];
     switch ($action)
     {
