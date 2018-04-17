@@ -60,7 +60,6 @@ try
           throw new Exception("Action non valide");
           break;
     }
-      file_put_contents("$dataDirectory/$dataFileName", json_encode($data));
   }
   else
     accueil();

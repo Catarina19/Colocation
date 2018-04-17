@@ -42,7 +42,7 @@ $titre = 'Collocation - Détails appartement';
     <p>
         Proprio :
         <a href="index.php?action=vue_modif&id=<?= $valeur['id'];?>"><i class="general foundicon-edit icon"></i></a>
-        <a href="index.php?action=vue_supprimer&id=<?= $valeur['id'];?>"><i class="general foundicon-remove icon"></i></a>
+        <a href="index.php?action=vue_supprimer_confirmer&id=<?= $valeur['id'];?>"><i class="general foundicon-remove icon"></i></a>
     </p>
 </div>
 <?php

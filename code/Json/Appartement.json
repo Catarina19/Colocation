@@ -1,1 +1,75 @@
-[{"id":4,"titre":"TestVille","region":"zurich","adresse":"fdfsf","npa":"1233","ville":"zurich","description":"ewreew","date_disponibilite":"33123-03-21","prix":"3231","email_proprietaire":"johan.voland@cpnv.ch"},{"id":5,"titre":"Ville Fribourg","region":"fribourg","adresse":"rere","npa":"1234","ville":"fribourg","description":"wewe","date_disponibilite":"3233-02-21","prix":"1213","email_proprietaire":"johan.voland@cpnv.ch"},{"id":6,"titre":"Test Aesch","region":"zurich","adresse":"wewqeq","npa":"123","ville":"Aesch","description":"dssd","date_disponibilite":"7657-06-06","prix":"213","email_proprietaire":"johan.voland@cpnv.ch"},{"id":7,"titre":"Ville de test","region":"zurich","adresse":"Rue random 1","npa":"1234","ville":"Ville du canton de Berne ok","description":"C'est un crash test.","date_disponibilite":"2345-03-12","prix":"1234","email_proprietaire":"johan.voland@cpnv.ch","date_disponibilte":"2345-03-12"},{"id":8,"titre":"Ville \u00e0 supprimer ok","region":"zurich","adresse":"Suppression ok","npa":"9876","ville":"Suppression ok","description":"Suppression","date_disponibilite":"7667-06-07","prix":"6566","email_proprietaire":"johan.voland@cpnv.ch","date_disponibilte":"7667-06-07"},{"id":1,"titre":"fdsfdsf","region":"zurich","adresse":"fsdfsdf","npa":"32323","ville":"fsdffd","description":"fsdfsfdf","date_disponibilite":"4344-03-31","prix":"323","email_proprietaire":"johan.voland@cpnv.ch"}]
+{
+  "0": {
+    "id": 4,
+    "titre": "TestVille",
+    "region": "zurich",
+    "adresse": "fdfsf",
+    "npa": "1233",
+    "ville": "zurich",
+    "description": "ewreew",
+    "date_disponibilite": "33123-03-21",
+    "prix": "3231",
+    "email_proprietaire": "johan.voland@cpnv.ch"
+  },
+  "1": {
+    "id": 5,
+    "titre": "Ville Fribourg",
+    "region": "fribourg",
+    "adresse": "rere",
+    "npa": "1234",
+    "ville": "fribourg",
+    "description": "wewe",
+    "date_disponibilite": "3233-02-21",
+    "prix": "1213",
+    "email_proprietaire": "johan.voland@cpnv.ch"
+  },
+  "2": {
+    "id": 6,
+    "titre": "Test Aesch",
+    "region": "zurich",
+    "adresse": "wewqeq",
+    "npa": "123",
+    "ville": "Aesch",
+    "description": "dssd",
+    "date_disponibilite": "7657-06-06",
+    "prix": "213",
+    "email_proprietaire": "johan.voland@cpnv.ch"
+  },
+  "3": {
+    "id": 7,
+    "titre": "Ville de test",
+    "region": "zurich",
+    "adresse": "Rue random 1",
+    "npa": "1234",
+    "ville": "Ville du canton de Berne ok",
+    "description": "C'est un crash test.",
+    "date_disponibilite": "2345-03-12",
+    "prix": "1234",
+    "email_proprietaire": "johan.voland@cpnv.ch",
+    "date_disponibilte": "2345-03-12"
+  },
+  "5": {
+    "id": 1,
+    "titre": "fdsfdsf",
+    "region": "zurich",
+    "adresse": "fsdfsdf",
+    "npa": "32323",
+    "ville": "fsdffd",
+    "description": "fsdfsfdf",
+    "date_disponibilite": "4344-03-31",
+    "prix": "323",
+    "email_proprietaire": "johan.voland@cpnv.ch"
+  },
+  "6": {
+    "id": 2,
+    "titre": "cxyxcxc",
+    "region": "zurich",
+    "adresse": "cycxxcy",
+    "npa": "23",
+    "ville": "xycy",
+    "description": "dsadd",
+    "date_disponibilite": "1321-03-23",
+    "prix": "554677",
+    "email_proprietaire": "johan.voland@cpnv.ch"
+  }
+}

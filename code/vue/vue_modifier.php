@@ -70,7 +70,7 @@ $titre = 'Collocation - Modifier appartement';
                 <td><input type="text" name="prix" value="<?= @$valeur['prix']; ?>" required> CHF</td>
             </tr>
             <tr>
-                <td><input class="btn" type="submit" value="ajouter"/></td>
+                <td><input class="btn" type="submit" value="modifier"/></td>
             </tr>
         </table>
         <input type="hidden" name="id" value="<?= @$valeur['id']; ?>">

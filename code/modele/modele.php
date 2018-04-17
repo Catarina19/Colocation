@@ -111,8 +111,8 @@ function add_appart()
     $prix = @$_POST['prix'];
 
     $email = $_SESSION['email'];
-    @$id = $_SESSION['idAuto'];
     $_SESSION['idAuto'] ++;
+    @$id = $_SESSION['idAuto'];
 
     try{
         // On essaye de récupérer le contenu existant
@@ -157,8 +157,6 @@ function mofifierAppart()
 {
     global $data;
 
-    // Récupération du fichier JSON
-
     // Récupération des informations
     $id = intval(@$_POST['id']);
     $titre = @$_POST['titre'];
@@ -170,8 +168,6 @@ function mofifierAppart()
     $disponibilite = @$_POST['disponibilite'];
     $prix = @$_POST['prix'];
 
-    // Ouverture du fichier JSON et préparation de l'écriture dans le fichier
-
 
     // Sélection de l'appartement désiré (selon son ID)
     foreach ($data as $i => $appart)
@@ -182,7 +178,7 @@ function mofifierAppart()
             break;
         }
     }
-
+    
     // Réécriture des champs
     if (isset($titre))
     {
@@ -217,6 +213,9 @@ function mofifierAppart()
         $data[$index]->prix = $prix;
     }
 
+    // Sauvegarde
+    file_put_contents("Json/Appartement.json", json_encode($data));
+
 }
 
 //----------------------------------- Suppression d'un appartement -----------------------------------------------------
@@ -224,23 +223,24 @@ function mofifierAppart()
 function supprAppart()
 {
     // Récupération du fichier JSON
-    $dataDirectory = "Json";
-    $dataFileName = "Appartement.json";
-    $data = file_get_contents("$dataDirectory/$dataFileName");
+    global $data;
 
     // Récupération de l'ID de l'appartement à supprimer
-    $id = $_GET['id'];
+    $id = intval($_GET['id']);
 
-    $data[$id]['id'];
-    for ($i = $id; $i < count($data)-1; $i++)
+    // Sélection de l'appartement désiré (selon son ID)
+    foreach ($data as $i => $appart)
     {
-        $data[$i] = $data[$i+1];
+        if ($appart->id == $id)
+        {
+            $index = $i;
+            break;
+        }
     }
-    unset($data[$id]);
-}
 
-/*for ($i=$index; $i < count($data)-1; $i++) // shift all elements beyond the one we must delete
-{
-    $data[$i] = $data[$i+1];
+    // Suppression
+    unset($data[$index]);
+
+    // Sauvegarde
+    file_put_contents("Json/Appartement.json", json_encode($data));
 }
-unset($data[$i]); // destroy the last one*/

@@ -14,7 +14,7 @@ function erreur($e)
   require "vue/vue_erreur.php";
 }
 
-// ----------------- Fonctions en lien avec les appartements ---------------------
+//----------------- Fonctions en lien avec les appartements ------------------------------------------------------------
 
 // Afficher l'appartement
 function appartement()
@@ -23,6 +23,7 @@ function appartement()
     require 'vue/vue_appartement.php';
 }
 
+// Afficher les détails d'un appartement
 function detail()
 {
         $_SESSION['appart'] = $_GET['id'];
@@ -30,11 +31,13 @@ function detail()
         require "vue/vue_detail.php";
 }
 
+// Confirmation de la suppression
 function confirmSuppr()
 {
     require "vue/vue_supprimer_confirmer.php";
 }
 
+// Suppression d'un appartement
 function supprimer()
 {
     if (isset($_GET['id']))
@@ -42,13 +45,9 @@ function supprimer()
         supprAppart();
         require "vue/vue_supprimer.php";
     }
-    else
-    {
-        $resultat = afficher_appart();
-        require "vue/vue_appartement.php";
-    }
 }
 
+// Modification d'un appartement
 function modifier()
 {
     if (isset($_GET['id']))
@@ -68,9 +67,9 @@ function modifier()
     }
 }
 
-// ----------------- Fontions en lien avec l'ajout d'appartements-----------------
+//----------------- Fontions en lien avec l'ajout d'appartements -------------------------------------------------------
 
-// Pas encore ajouté
+// Quand aucune donnée n'a été ajoutée
 function ajouter()
 {
     require "vue/vue_ajouter.php";
@@ -84,21 +83,24 @@ function ajout()
     require "vue/vue_appartement.php";
 }
 
-// ----------------- Fonctions en lien avec l'inscription -----------------
+//----------------- Fonctions en lien avec l'inscription ---------------------------------------------------------------
 
+// Quand aucune donnée n'a été inscrite
 function inscription()
 {
     require 'vue/vue_inscription.php';
 }
 
+// Création du nouveau membre
 function enregistrer()
 {
     create_membre();
     require "vue/vue_login.php";
 }
 
-// ----------------- Fonctions en lien avec login -------------------------
+//----------------- Fonctions en lien avec login -----------------------------------------------------------------------
 
+// Connexion
 function login()
 {
     $email = @$_POST['email'];
@@ -132,8 +134,9 @@ function Json()
     require 'vue_json.php';
 }
 
-// ----------------- Fonctions en lien avec profil -------------------------
+//----------------- Fonctions en lien avec profil ----------------------------------------------------------------------
 
+// Affichage du profil
 function profil()
 {
     $resultat = afficher_appart();
