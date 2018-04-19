@@ -114,8 +114,9 @@ function add_appart()
 
     $email = $_SESSION['email'];
 
-    @$id = $_SESSION['idAuto'];
-    $_SESSION['idAuto'] ++;
+    IDAuto();
+    $id = $_SESSION['idAuto'];
+    //$_SESSION['idAuto'] ++;
 
     try{
         // On essaye de récupérer le contenu existant
@@ -144,10 +145,11 @@ function add_appart()
         $newAppart -> email_proprietaire = $email;
 
         $tableau_pour_json [] = $newAppart;
+
+        $tableau_pour_json = array_values($tableau_pour_json);
+
         // Réencodage du json
         $contenu_json = json_encode($tableau_pour_json);
-
-        $contenu_json = array_values($contenu_json);
 
         // Stockage du json dans son fichier
         file_put_contents("$dataDirectory/$dataFileName", $contenu_json);
@@ -268,16 +270,18 @@ function IDAuto()
     $data = json_decode(file_get_contents("$dataDirectory/$dataFileName"));
 
     // Récupère le dernier ID inscrit
-    foreach ($data as $appart)
-    {
-        $ID = $appart['id'];
-    }
+    //if (@$_SESSION['idAuto'] < 1) {
+        foreach ($data as $appart) {
+            $_SESSION['idAuto'] = $appart['id'];
+        }
+    //}
 
-
-    if (@$ID == null)
+    /*if (@$ID == null)
     {
         @$ID ++;
-    }
+    }*/
+
+    //@$ID ++;
     // Stoke l'ID récupéré
-    $_SESSION['idAuto'] = $ID;
+    $_SESSION['idAuto'] ++;
 }

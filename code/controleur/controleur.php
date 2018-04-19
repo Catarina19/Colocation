@@ -6,7 +6,7 @@ require "modele/modele.php";
 function accueil()
 {
     // Récupérer l'ID des appartements
-    IDAuto();
+    //IDAuto();
 
     require "vue/vue_accueil.php";
 }
