@@ -113,8 +113,9 @@ function add_appart()
     $prix = @$_POST['prix'];
 
     $email = $_SESSION['email'];
-    $_SESSION['idAuto'] ++;
+
     @$id = $_SESSION['idAuto'];
+    $_SESSION['idAuto'] ++;
 
     try{
         // On essaye de récupérer le contenu existant
@@ -146,6 +147,8 @@ function add_appart()
         // Réencodage du json
         $contenu_json = json_encode($tableau_pour_json);
 
+        $contenu_json = array_values($contenu_json);
+
         // Stockage du json dans son fichier
         file_put_contents("$dataDirectory/$dataFileName", $contenu_json);
     }catch (Exception $e){
@@ -157,7 +160,10 @@ function add_appart()
 
 function mofifierAppart()
 {
-    global $data;
+    // Sélection du stockage des appartements
+    $dataDirectory = "Json";
+    $dataFileName = "Appartement.json";
+    $data = json_decode(file_get_contents("$dataDirectory/$dataFileName"));
 
     // Récupération des informations
     $id = intval(@$_POST['id']);
@@ -215,6 +221,7 @@ function mofifierAppart()
         $data[$index]->prix = $prix;
     }
 
+    $data = array_values($data);
     // Sauvegarde
     file_put_contents("Json/Appartement.json", json_encode($data));
 
@@ -225,7 +232,10 @@ function mofifierAppart()
 function supprAppart()
 {
     // Récupération du fichier JSON
-    global $data;
+    // Sélection du stockage des appartements
+    $dataDirectory = "Json";
+    $dataFileName = "Appartement.json";
+    $data = json_decode(file_get_contents("$dataDirectory/$dataFileName"));
 
     // Récupération de l'ID de l'appartement à supprimer
     $id = intval($_GET['id']);
@@ -242,7 +252,32 @@ function supprAppart()
 
     // Suppression
     unset($data[$index]);
+    $data = array_values($data);
 
     // Sauvegarde
     file_put_contents("Json/Appartement.json", json_encode($data));
+}
+
+//------------------------------------ Gestion des ID automatiques pour les appartements -------------------------------
+
+function IDAuto()
+{
+    // Récupération du fichier JSON
+    $dataDirectory = "Json";
+    $dataFileName = "Appartement.json";
+    $data = json_decode(file_get_contents("$dataDirectory/$dataFileName"));
+
+    // Récupère le dernier ID inscrit
+    foreach ($data as $appart)
+    {
+        $ID = $appart['id'];
+    }
+
+
+    if (@$ID == null)
+    {
+        @$ID ++;
+    }
+    // Stoke l'ID récupéré
+    $_SESSION['idAuto'] = $ID;
 }

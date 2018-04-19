@@ -5,7 +5,10 @@ require "modele/modele.php";
 // Affichage de la page de l'accueil
 function accueil()
 {
-  require "vue/vue_accueil.php";
+    // Récupérer l'ID des appartements
+    IDAuto();
+
+    require "vue/vue_accueil.php";
 }
 
 function erreur($e)
