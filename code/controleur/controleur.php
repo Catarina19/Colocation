@@ -204,12 +204,14 @@ function login()
     $email = @$_POST['email'];
     $password = @$_POST['password'];
 
-    // Pour afficher le nom et le prénom en haut de l'écran
     $nom = @$_POST['nom'];
     $prenom = @$_POST['prenom'];
 
+    $tel = @$_POST['tel'];
+    $naissance = @$_POST['naissance'];
+
     if(!($email == "") && !($password == "")) {
-        $resultat = checkPass($email, $password, $nom, $prenom);
+        $resultat = checkPass($email, $password, $nom, $prenom, $tel, $naissance);
         if ($resultat) {
 
             $_SESSION['email'] = $email;
