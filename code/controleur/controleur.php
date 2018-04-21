@@ -137,12 +137,12 @@ function ajout()
     }
 
     // Application du résultat du test de l'ID
-    if ($confirmID == true)
+    if (@$confirmID == true)
     {
         // Message d'erreur
         require "vue/vue_ajouter_erreur_id.php";
     }
-    else if ($confirmID == false)
+    else if (@$confirmID == false)
     {
         // Création de l'appartment
         add_appart();

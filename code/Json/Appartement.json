@@ -1,2 +1,62 @@
 [
+  {
+    "id": "1",
+    "titre": "2 pi\u00e8ces \u00e0 Zurich",
+    "region": "zurich",
+    "adresse": "Grand rue",
+    "npa": "1234",
+    "ville": "Zurich",
+    "description": "Appartement situ\u00e9 au centre de Zurich",
+    "date_disponibilite": "2018-04-30",
+    "prix": "400",
+    "email_proprietaire": "johan.voland@cpnv.ch"
+  },
+  {
+    "id": "2",
+    "titre": "2 pi\u00e8ces \u00e0 Lausanne",
+    "region": "vaud",
+    "adresse": "Grand rue",
+    "npa": "1234",
+    "ville": "Lausanne",
+    "description": "Appartement situ\u00e9 au centre de Lausanne",
+    "date_disponibilite": "2018-04-30",
+    "prix": "400",
+    "email_proprietaire": "johan.voland@cpnv.ch"
+  },
+  {
+    "id": "3",
+    "titre": "Colocation",
+    "region": "vaud",
+    "adresse": "Grand rue",
+    "npa": "1234",
+    "ville": "Yverdon",
+    "description": "Appartement situ\u00e9 au centre d'Yverdon",
+    "date_disponibilite": "2018-04-30",
+    "prix": "400",
+    "email_proprietaire": "johan.voland@cpnv.ch"
+  },
+  {
+    "id": "4",
+    "titre": "chambre \u00e0 Zurich",
+    "region": "zurich",
+    "adresse": "Grand rue",
+    "npa": "1234",
+    "ville": "Zurich",
+    "description": "Appartement situ\u00e9 près de la gare",
+    "date_disponibilite": "2018-04-30",
+    "prix": "400",
+    "email_proprietaire": "johan.voland@cpnv.ch"
+  },
+  {
+    "id": "5",
+    "titre": "Appartement à Fribourg",
+    "region": "fribourg",
+    "adresse": "Grand rue",
+    "npa": "1234",
+    "ville": "Fribourg",
+    "description": "chambre pouvant contenir jusqu'à 2 personnes",
+    "date_disponibilite": "2018-04-30",
+    "prix": "400",
+    "email_proprietaire": "johan.voland@cpnv.ch"
+  }
 ]
