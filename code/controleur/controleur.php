@@ -184,12 +184,12 @@ function enregistrer()
     }
 
     // Application du résultat du test de l'email
-    if ($confirmEmail == true)
+    if (@$confirmEmail == true)
     {
         // Message d'erreur
         require "vue/vue_inscription_erreur_email.php";
     }
-    else if ($confirmEmail == false)
+    else if (@$confirmEmail == false)
     {
         // Création du membre
         create_membre();
