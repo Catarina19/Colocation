@@ -2,7 +2,7 @@
 
 // tampon de flux stocké en mémoire
 ob_start();
-$titre="Colocation - Accueil";
+$titre="Appartager  - Accueil";
 ?>
 
 <div class="span12" id="divMain" style="text-align: center;">

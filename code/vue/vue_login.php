@@ -1,7 +1,7 @@
 <?php
 
 ob_start();
-$titre = 'Colocation - Login';
+$titre = 'Appartager - Login';
 ?>
     <div class="span12" id="divMain">
         <h1>Login</h1>

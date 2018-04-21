@@ -7,7 +7,7 @@
  */
 
 ob_start();
-$titre = 'Collocation - Ajouter une proposition';
+$titre = 'Appartager - Ajouter une proposition';
 ?>
 
 <!-- Contenu -->
@@ -17,8 +17,11 @@ $titre = 'Collocation - Ajouter une proposition';
     <form class="form" method="POST" action="index.php?action=ajout">
         <table class="table">
             <tr>
+                <td>ID :</td>
+                <td><input type="number" name="IDappart" value="<?=@$_POST['IDappart'];?>" required placeholder="Veuillez inscrire un ID"></td>
+
                 <td>Titre :</td>
-                <td><input type="text" name="titre" value="<?=@$_POST['titre'];?>" required></td>
+                <td><input type="text" name="titre" value="<?=@$_POST['titre'];?>" required placeholder="Inscrire un nom à l'appart."></td>
 
                 <td>Région : </td>
                 <td>
@@ -51,30 +54,31 @@ $titre = 'Collocation - Ajouter une proposition';
                         <option value="jura">Jura</option>
                     </select>
                 </td>
-
-                <td>Adresse : </td>
-                <td><input type="text" name="adresse" value="<?= @$_POST['adresse']; ?>" required></td>
             </tr>
             <tr>
-                <td>NPA : </td>
-                <td><input type="text" name="npa" value="<?= @$_POST['npa']; ?>" required></td>
+                <td>Adresse : </td>
+                <td><input type="text" name="adresse" value="<?= @$_POST['adresse']; ?>" required placeholder="Veuillez inscrire l'adresse"></td>
 
-                <!-- Gestion de la ville/commune -->
+                <td>NPA : </td>
+                <td><input type="number" name="npa" value="<?= @$_POST['npa']; ?>" required placeholder="Veuillez inscrire le NPA"></td>
+
                 <td>Ville : </td>
-                <td><input type="text" name="ville" value="<?= @$_POST['ville']; ?>" required></td>
+                <td><input type="text" name="ville" value="<?= @$_POST['ville']; ?>" required placeholder="Veuillez inscrire la ville"></td>
             </tr>
 
             <tr>
                 <td>Description : </td>
                 <td><textarea name="description" required></textarea></td>
             </tr>
+
             <tr>
                 <td>Date de disponibilité : </td>
                 <td><input type="date" name="disponibilite" value="<?= @$_POST['disponibilite']; ?>" required></td>
 
                 <td>Prix : </td>
-                <td><input type="text" name="prix" value="<?= @$_POST['prix']; ?>" required> CHF</td>
+                <td><input type="number" name="prix" value="<?= @$_POST['prix']; ?>" required> CHF</td>
             </tr>
+
             <tr>
                 <td><input class="btn" type="submit" value="ajouter"/></td>
             </tr>

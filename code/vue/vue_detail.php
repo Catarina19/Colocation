@@ -1,7 +1,7 @@
 <?php
 
 ob_start();
-$titre = 'Collocation - Détails appartement';
+$titre = 'Appartager - Détails appartement';
 ?>
 
 <!-- Contenu -->

@@ -5,9 +5,6 @@ require "modele/modele.php";
 // Affichage de la page de l'accueil
 function accueil()
 {
-    // Récupérer l'ID des appartements
-    //IDAuto();
-
     require "vue/vue_accueil.php";
 }
 
@@ -17,7 +14,7 @@ function erreur($e)
   require "vue/vue_erreur.php";
 }
 
-//----------------- Fonctions en lien avec les appartements ------------------------------------------------------------
+//----------------- Fonctions en lien avec l'affichage de la liste de appartements -------------------------------------
 
 // Afficher l'appartement
 function appartement()
@@ -83,9 +80,38 @@ function ajouter()
 // Après avoir inscrit des données
 function ajout()
 {
-    add_appart();
-    $resultat = afficher_appart();
-    require "vue/vue_appartement.php";
+    // Sélection des informations relatives à la vérification de l'email
+    $IDappart = @$_POST['IDappart'];
+    $verifID = afficher_appart();
+
+    // Test si l'ID existe déjà
+    foreach ($verifID as $testID)
+    {
+        if ($testID['id'] == $IDappart)
+        {
+            $confirmID = true;
+            break;
+        }
+        else
+        {
+            $confirmID = false;
+        }
+    }
+
+    // Application du résultat du test de l'ID
+    if ($confirmID == true)
+    {
+        // Message d'erreur
+        require "vue/vue_ajouter_erreur_id.php";
+    }
+    else if ($confirmID == false)
+    {
+        // Création de l'appartment
+        add_appart();
+
+        // Redirection vers la liste des appartements
+        appartement();
+    }
 }
 
 //----------------- Fonctions en lien avec l'inscription ---------------------------------------------------------------
@@ -96,16 +122,45 @@ function inscription()
     require 'vue/vue_inscription.php';
 }
 
-// Création du nouveau membre
+// Quand des données ont été inscrites
 function enregistrer()
 {
-    create_membre();
-    require "vue/vue_login.php";
+    // Sélection des différentes informations à analyser
+    $email = $_POST['email'];
+    $verifEmail = selectUser();
+
+    // Test si l'email existe en double
+    foreach ($verifEmail as $testEmail)
+    {
+        // Si l'email existe déjà
+        if ($testEmail['Email'] == $email)
+        {
+            $confirmEmail = true;
+            break;
+        }
+        // S'il n'existe pas
+        else
+        {
+            $confirmEmail = false;
+        }
+    }
+
+    // Application du résultat du test de l'email
+    if ($confirmEmail == true)
+    {
+        // Message d'erreur
+        require "vue/vue_inscription_erreur_email.php";
+    }
+    else if ($confirmEmail == false)
+    {
+        // Création du membre
+        create_membre();
+        require "vue/vue_login.php";
+    }
 }
 
 //----------------- Fonctions en lien avec login -----------------------------------------------------------------------
 
-// Connexion
 function login()
 {
     $email = @$_POST['email'];
@@ -132,11 +187,6 @@ function login()
         require 'vue/vue_login.php';
     }
 
-}
-
-function Json()
-{
-    require 'vue_json.php';
 }
 
 //----------------- Fonctions en lien avec profil ----------------------------------------------------------------------

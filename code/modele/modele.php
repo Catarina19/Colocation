@@ -85,6 +85,7 @@ function create_membre()
 
 function afficher_appart()
 {
+    // Destination du fichier Json
     $dataDirectory = "Json";
     $dataFileName = "Appartement.json";
 
@@ -98,11 +99,13 @@ function afficher_appart()
 
 function add_appart()
 {
+    // Destination du fichier Json
     $dataDirectory = "Json";
     $dataFileName = "Appartement.json";
 
 
     // Récupération des informations
+    $id = @$_POST['IDappart'];
     $titre = @$_POST['titre'];
     $region = @$_POST['region'];
     $adresse = @$_POST['adresse'];
@@ -111,12 +114,7 @@ function add_appart()
     $description = @$_POST['description'];
     $disponibilite = @$_POST['disponibilite'];
     $prix = @$_POST['prix'];
-
     $email = $_SESSION['email'];
-
-    IDAuto();
-    $id = $_SESSION['idAuto'];
-    //$_SESSION['idAuto'] ++;
 
     try{
         // On essaye de récupérer le contenu existant
@@ -168,7 +166,7 @@ function mofifierAppart()
     $data = json_decode(file_get_contents("$dataDirectory/$dataFileName"));
 
     // Récupération des informations
-    $id = intval(@$_POST['id']);
+    $id = @$_POST['id'];
     $titre = @$_POST['titre'];
     $region = @$_POST['region'];
     $adresse = @$_POST['adresse'];
@@ -224,7 +222,8 @@ function mofifierAppart()
     }
 
     $data = array_values($data);
-    // Sauvegarde
+
+    // Sauvegarde dans le fichier Json
     file_put_contents("Json/Appartement.json", json_encode($data));
 
 }
@@ -256,32 +255,18 @@ function supprAppart()
     unset($data[$index]);
     $data = array_values($data);
 
-    // Sauvegarde
+    // Sauvegarde dans le fichier Json
     file_put_contents("Json/Appartement.json", json_encode($data));
 }
 
-//------------------------------------ Gestion des ID automatiques pour les appartements -------------------------------
+//------------------------------------- Sélection des informations d'un utilisateur ------------------------------------
 
-function IDAuto()
+function selectUser()
 {
-    // Récupération du fichier JSON
+    // Récupération du fichier Json
     $dataDirectory = "Json";
-    $dataFileName = "Appartement.json";
-    $data = json_decode(file_get_contents("$dataDirectory/$dataFileName"));
+    $dataFileName = "Membre.json";
+    $data = json_decode(file_get_contents("$dataDirectory/$dataFileName"), true);
 
-    // Récupère le dernier ID inscrit
-    //if (@$_SESSION['idAuto'] < 1) {
-        foreach ($data as $appart) {
-            $_SESSION['idAuto'] = $appart['id'];
-        }
-    //}
-
-    /*if (@$ID == null)
-    {
-        @$ID ++;
-    }*/
-
-    //@$ID ++;
-    // Stoke l'ID récupéré
-    $_SESSION['idAuto'] ++;
+    return $data;
 }

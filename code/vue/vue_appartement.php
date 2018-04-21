@@ -9,7 +9,7 @@
  */
 
 ob_start();
-$titre = 'Collocation - Appartements';
+$titre = 'Appartager - Appartements';
 
 ?>
 

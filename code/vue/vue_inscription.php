@@ -2,7 +2,7 @@
 
 // tampon de flux stocké en mémoire
 ob_start();
-$titre="RentASnow - Inscription";
+$titre="Appartager - Inscription";
 
 ?>
 

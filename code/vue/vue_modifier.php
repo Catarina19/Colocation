@@ -1,7 +1,7 @@
 <?php
 
 ob_start();
-$titre = 'Collocation - Modifier appartement';
+$titre = 'Appartager - Modifier appartement';
 ?>
 
     <!-- Contenu -->
@@ -12,6 +12,9 @@ $titre = 'Collocation - Modifier appartement';
     <form class="form" method="post" action="index.php?action=vue_modif">
         <table class="table">
             <tr>
+                <td>ID :</td>
+                <td><input type="number" name="IDappart" value="<?=@$valeur['IDappart'];?>" readonly></td>
+
                 <td>Titre :</td>
                 <td><input type="text" name="titre" value="<?=@$valeur['titre'];?>" required></td>
 
@@ -46,11 +49,11 @@ $titre = 'Collocation - Modifier appartement';
                         <option value="jura">Jura</option>
                     </select>
                 </td>
-
-                <td>Adresse : </td>
-                <td><input type="text" name="adresse" value="<?= @$valeur['adresse']; ?>" required></td>
             </tr>
             <tr>
+                <td>Adresse : </td>
+                <td><input type="text" name="adresse" value="<?= @$valeur['adresse']; ?>" required></td>
+
                 <td>NPA : </td>
                 <td><input type="text" name="npa" value="<?= @$valeur['npa']; ?>" required></td>
 

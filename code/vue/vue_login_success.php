@@ -1,7 +1,7 @@
 <?php
 
 ob_start();
-$titre = 'Rent A Snow - Nos snows';
+$titre = 'Appartager - Nos snows';
 
 ?>
 

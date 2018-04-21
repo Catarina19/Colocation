@@ -1,7 +1,7 @@
 <?php
 
 ob_start();
-$titre = 'Collocation - Supprimer appartement';
+$titre = 'Appartager - Supprimer appartement';
 ?>
 
     <!-- Contenu -->

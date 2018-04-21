@@ -7,7 +7,7 @@
  */
 
 ob_start();
-$titre = 'Collocation - Supprimer appartement Confirmation';
+$titre = 'Appartager - Supprimer appartement Confirmation';
 ?>
 
 <h2>Confirmer suppression</h2>
