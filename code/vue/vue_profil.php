@@ -8,13 +8,16 @@ $titre = 'Appartager - Profil';
 
         <div class="span3" id="profil_info" style="border: 1px solid black; border-radius: 5px; padding: 20px; text-align: center;">
             <h4><u>Vos informations</u></h4>
+            <?php if(isset($_SESSION['email'])) :?>
             <?= $_SESSION['prenom']; ?> <?= $_SESSION['nom']; ?> <br>
             <?= $_SESSION['email']; ?> <br>
-            <?//= $_SESSION['tel']; ?> tel <br>
-            <?//= $_SESSION['naissance']; ?> naissance
+            <?= $_SESSION['email']; ?> <br>
+            <?= $_SESSION['tel']; ?> <br>
+            <?= $_SESSION['naissance']; ?>
+            <?php endif; ?>
             <br><br><br>
-            <a href="#">Messages reçus</a><br>
-            <a href="#">Messages envoyés</a><br>
+            <a href="index.php?action=message_recu">Messages reçus</a><br>
+            <a href="index.php?action=message_envoyer">Messages envoyés</a><br>
         </div>
 
         <?php foreach ($resultat as $valeur) { ?>
@@ -23,19 +26,13 @@ $titre = 'Appartager - Profil';
                 <img src="../contenu/images/pic01.jpg">
                 <?= $valeur['titre']; ?>
                 <?= $valeur['description']; ?>
-                <a href="index.php">Détails</a>
+                <a href="index.php?action=detail&id=<?=$valeur['id']?>">Détails</a>
             </div>
             <?php } ?>
         <?php } ?>
     </div>
 
 <?php
-
-/*<br>
-    <FORM ACTION="trait-new_fiche.php" method="POST" ENCTYPE="multipart/form-data">
-        <input type="hidden" name=\"max_file_size" value="50000">
-        <label for="title" class="float">Image : </label>  <input TYPE="file" NAME="image"><br>
-    </FORM>*/
 
 $contenu=ob_get_clean();
 require "gabarit.php";

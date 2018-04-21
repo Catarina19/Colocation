@@ -23,9 +23,6 @@ try
       case 'enregistrer' :
           enregistrer();
           break;
-      case 'vue_Json' :
-          Json();
-          break;
       case 'vue_inscription' :
           inscription();
           break;
@@ -50,8 +47,29 @@ try
       case 'vue_login' :
           login();
           break;
-        case 'vue_supprimer_confirmer' :
+      case 'vue_supprimer_confirmer' :
             confirmSuppr();
+            break;
+      case 'info_coloc' :
+            info_coloc();
+            break;
+      case 'message' :
+            message();
+            break;
+      case 'mail_message' :
+            mail_message();
+            break;
+      case 'mail_contacter' :
+            mail_contacter();
+            break;
+      case 'message_recu' :
+            message_recu();
+            break;
+      case 'message_envoyer' :
+            message_envoyer();
+            break;
+      case 'contacter' :
+            contacter();
             break;
       default :
           throw new Exception("Action non valide");

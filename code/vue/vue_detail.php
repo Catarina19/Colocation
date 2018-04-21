@@ -35,16 +35,21 @@ $titre = 'Appartager - Détails appartement';
                 <?= $valeur['description']; ?><br><br>
             </div>
         </div>
+
+        <?php if(isset($_SESSION['email'])) :?>
+            <?php if($_SESSION['email']== $valeur['email_proprietaire']) :?>
+                <p>
+                    <a href="index.php?action=vue_modif&id=<?= $valeur['id'];?>"  class="span3"><i class="general foundicon-edit icon"></i></a>
+                    <a href="index.php?action=vue_supprimer&id=<?= $valeur['id'];?>"><i class="general foundicon-remove icon"></i></a>
+                </p>
+            <?php else : ?>
+                <p><a href="index.php?action=info_coloc" class="span3">Informations colocataire</a> <a href="index.php?action=contacter&id=<?= $valeur['id'];?>">Contacter</a></p>
+            <?php endif; ?>
+        <?php else : ?>
+            <p><a href="index.php?action=info_coloc&id=<?= $valeur['id'];?>" class="span3">Informations colocataire</a> <a href="index.php?action=message">Message</a></p>
+        <?php endif; ?>
+
 <?php }}?>
-<div class="span12">
-    <p>Visiteur : <a href="#">Informations colocataire</a> <a href="#">Message</a></p><br>
-    <p>Membre : <a href="#">Informations colocataire</a> <a href="#">Contacter</a></p><br>
-    <p>
-        Proprio :
-        <a href="index.php?action=vue_modif&id=<?= $valeur['id'];?>"><i class="general foundicon-edit icon"></i></a>
-        <a href="index.php?action=vue_supprimer_confirmer&id=<?= $valeur['id'];?>"><i class="general foundicon-remove icon"></i></a>
-    </p>
-</div>
 <?php
 
 $contenu=ob_get_clean();

@@ -31,6 +31,44 @@ function detail()
         require "vue/vue_detail.php";
 }
 
+//----------------- Fonctions en lien avec les détails -------------------------------------
+
+//informations sur les colocations pour les membres et les visiteurs
+function info_coloc()
+{
+    $_SESSION['appart'] = $_GET['id'];
+    $resultat = afficher_appart();
+    require "vue/vue_info_colocataire.php";
+}
+
+//Message pour les visiteurs
+function message()
+{
+    $resultat = afficher_appart();
+    require "vue/vue_message.php";
+}
+
+//Message pour les membres
+function contacter()
+{
+    $resultat = afficher_appart();
+    require "vue/vue_contacter.php";
+}
+
+//Rentrer les données dans Message.json
+function mail_message()
+{
+    create_message();
+    require "vue/vue_accueil.php";
+}
+
+//Rentrer les données dans Message.json
+function mail_contacter()
+{
+    create_contacter();
+    require "vue/vue_accueil.php";
+}
+
 //----------------------------- Fonctions en lien avec la modification/suppression d'appartements ----------------------
 
 // Confirmation de la suppression
@@ -198,4 +236,15 @@ function profil()
     require 'vue/vue_profil.php';
 }
 
+function message_recu()
+{
+    $resultat = afficher_message();
+    require "vue/vue_message_recu.php";
+}
+
+function message_envoyer()
+{
+    $resultat = afficher_message();
+    require "vue/vue_message_envoyer.php";
+}
 

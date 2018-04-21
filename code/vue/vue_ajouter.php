@@ -78,7 +78,14 @@ $titre = 'Appartager - Ajouter une proposition';
                 <td>Prix : </td>
                 <td><input type="number" name="prix" value="<?= @$_POST['prix']; ?>" required> CHF</td>
             </tr>
-
+            <tr>
+                <td>Images de l'appartement : </td>
+                <td>
+                    <div class="box__input">
+                        <input class="box__file" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple required/>
+                    </div>
+                </td>
+            </tr>
             <tr>
                 <td><input class="btn" type="submit" value="ajouter"/></td>
             </tr>

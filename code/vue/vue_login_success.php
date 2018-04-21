@@ -10,7 +10,6 @@ $titre = 'Appartager - Nos snows';
             <h4>Vous avez réussi à vous connectez !</h4>
         </header>
     </article>
-    <hr/>
 
 <?php
 $contenu=ob_get_clean();
